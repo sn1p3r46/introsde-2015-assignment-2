@@ -2,3 +2,5 @@ build/
 ivy/
 WebContent/WEB-INF/lib/
 .DS_Store
+*.class
+
