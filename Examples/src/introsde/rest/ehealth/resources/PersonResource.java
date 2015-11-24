@@ -161,4 +161,17 @@ public class PersonResource {
     		throw new RuntimeException("Get: History for person " + id + " not found");
     	return hmh;
     }
+
+    @GET
+    @Path("{measureType}/{mid}")
+    @Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
+    public HealthMeasureHistory getMeasureTypePidAndMid(@PathParam("measureType") String measureName, @PathParam("mid") String mid){
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n");
+        Person p = Person.getPersonById(this.id);
+        HealthMeasureHistory hmh  = HealthMeasureHistory.getHealthMeasureHistoryByPidAndMid(p,Integer.parseInt(mid));
+        System.out.println("\n\n\n\n\nDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD\n\n\n\n\n\n");
+        if (hmh == null)
+            throw new RuntimeException("Get: History for person " + id + " not found");
+        return hmh;
+    }
 }

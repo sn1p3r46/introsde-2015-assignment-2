@@ -36,7 +36,8 @@ import javax.xml.bind.annotation.XmlTransient;
 	@Table(name="HealthMeasureHistory")
 	@NamedQueries({
 		@NamedQuery(name="HealthMeasureHistory.findAll", query="SELECT h FROM HealthMeasureHistory h"),
-		@NamedQuery(name="HealthMeasureHistory.findByMeasureAndPerson", query="SELECT hmh FROM HealthMeasureHistory hmh WHERE hmh.person = ?1 AND hmh.measureDefinition = ?2")
+		@NamedQuery(name="HealthMeasureHistory.findByMeasureAndPerson", query="SELECT hmh FROM HealthMeasureHistory hmh WHERE hmh.person = ?1 AND hmh.measureDefinition = ?2"),
+		@NamedQuery(name="HealthMeasureHistory.findByPidAndMid", query="SELECT h FROM HealthMeasureHistory h WHERE h.person = ?1 AND h.idMeasureHistory = ?2"),
 	})
 @XmlRootElement(name="measure")
 	public class HealthMeasureHistory implements Serializable {
@@ -118,6 +119,24 @@ import javax.xml.bind.annotation.XmlTransient;
 		HealthMeasureHistory p = em.find(HealthMeasureHistory.class, id);
 		LifeCoachDao.instance.closeConnections(em);
 		return p;
+	}
+
+	public static HealthMeasureHistory getHealthMeasureHistoryByPidAndMid(Person pid, int mid) {
+		EntityManager em = LifeCoachDao.instance.createEntityManager();
+		System.out.println("SONO QUI");
+		TypedQuery<HealthMeasureHistory> query = em.createNamedQuery("HealthMeasureHistory.findByPidAndMid", HealthMeasureHistory.class);
+		System.out.println("SONO ANCHE QUI");
+		query.setParameter(1, pid);
+		query.setParameter(2, mid);
+		System.out.println("SONO ANCHE ANCHE QUI");
+		List<HealthMeasureHistory> hmh = query.getResultList();
+		if(hmh==null){
+			System.out.println("SONONULLO");
+			return null;
+		}
+		LifeCoachDao.instance.closeConnections(em);
+
+		return hmh.get(0);
 	}
 
 	public static List<HealthMeasureHistory> getByPersonMeasureNameAndPerson(Person person, MeasureDefinition mdef) {
