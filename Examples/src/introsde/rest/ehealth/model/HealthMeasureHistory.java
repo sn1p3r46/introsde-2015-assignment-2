@@ -38,7 +38,7 @@ import javax.xml.bind.annotation.XmlTransient;
 		@NamedQuery(name="HealthMeasureHistory.findAll", query="SELECT h FROM HealthMeasureHistory h"),
 		@NamedQuery(name="HealthMeasureHistory.findByMeasureAndPerson", query="SELECT hmh FROM HealthMeasureHistory hmh WHERE hmh.person = ?1 AND hmh.measureDefinition = ?2")
 	})
-	@XmlRootElement(name="ciaone")
+@XmlRootElement(name="measure")
 	public class HealthMeasureHistory implements Serializable {
 	private static final long serialVersionUID = 1L;
 
