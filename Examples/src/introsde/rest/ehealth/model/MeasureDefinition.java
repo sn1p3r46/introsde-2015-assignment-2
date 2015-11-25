@@ -5,8 +5,20 @@ import introsde.rest.ehealth.model.MeasureDefaultRange;
 
 import java.io.Serializable;
 import java.util.List;
-
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+import javax.persistence.TableGenerator;
+import javax.persistence.NamedQuery;
+import javax.persistence.NamedQueries;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlTransient;
@@ -97,7 +109,7 @@ public class MeasureDefinition implements Serializable {
 	    LifeCoachDao.instance.closeConnections(em);
 	    return list;
 	}
-
+	
 	public static MeasureDefinition saveMeasureDefinition(MeasureDefinition p) {
 		EntityManager em = LifeCoachDao.instance.createEntityManager();
 		EntityTransaction tx = em.getTransaction();

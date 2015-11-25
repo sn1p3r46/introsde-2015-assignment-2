@@ -162,8 +162,8 @@ import javax.xml.bind.annotation.XmlTransient;
 		tx.begin();
 		em.persist(p);
 		tx.commit();
-	    LifeCoachDao.instance.closeConnections(em);
-	    return p;
+	  LifeCoachDao.instance.closeConnections(em);
+	  return p;
 	}
 
 	public static HealthMeasureHistory updateHealthMeasureHistory(HealthMeasureHistory p) {

@@ -3,6 +3,7 @@ package introsde.rest.ehealth.resources;
 import introsde.rest.ehealth.model.Person;
 import introsde.rest.ehealth.model.HealthMeasureHistory;
 import introsde.rest.ehealth.model.MeasureDefinition;
+import introsde.rest.ehealth.model.LifeStatus;
 import java.util.*;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
@@ -17,10 +18,12 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Request;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.Status;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.NotFoundException;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Path;
+import java.util.Calendar;
 
 
 @Stateless // only used if the the application is deployed in a Java EE container
@@ -146,6 +149,15 @@ public class PersonResource {
 		return person;
 	}
 
+
+    @GET
+    @Path("/lf")
+    @Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
+    public List<LifeStatus> getLifeStatus(){
+        Person person = this.getPersonById(id);
+        return person.getLifeStatus();
+    }
+
     @GET
     @Path("{measureType}")
     @Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
@@ -162,16 +174,75 @@ public class PersonResource {
     	return hmh;
     }
 
+    @POST
+    @Path("{measureType}")
+    @Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
+    @Consumes({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
+    public Response setMeasureType(LifeStatus lf, @PathParam("measureType") String measureName){
+
+        Person p = Person.getPersonById(this.id);
+
+    	if(p == null){
+    		return Response.status(Status.NOT_FOUND).build();
+    	}
+        System.out.println("\n\n\n\n\n\n\n\n\n"+lf.getValue()+"\n\n\n\n\n\n\n\n\n");
+        //searches the measure definition associated with the name of the measure
+
+        MeasureDefinition mdef = MeasureDefinition.getMeasureDefinitionByName(measureName);
+
+        LifeStatus olf = LifeStatus.getLifeStatusByMeasureDefinitionAndPerson(mdef,p);
+        if(olf!=null){
+            LifeStatus.removeLifeStatus(olf);
+        }
+
+        lf.setIdMeasure(mdef.getIdMeasureDef());
+        lf.setPerson(p);
+        lf.setMeasureDefinition(mdef);
+        //lf.setValue(hmh.getValue());
+        lf = LifeStatus.saveLifeStatus(lf);
+
+        HealthMeasureHistory hmh = new HealthMeasureHistory();
+        hmh.setTimestamp(Calendar.getInstance().getTime());
+        hmh.setMeasureDefinition(mdef);
+        hmh.setPerson(p);
+        hmh.setValue(lf.getValue());
+
+        HealthMeasureHistory.saveHealthMeasureHistory(hmh);
+        //if (hmh == null)
+        //    throw new RuntimeException("Get: History for person " + id + " not found");
+        return Response.created(uriInfo.getAbsolutePath()).build();
+    }
+
     @GET
     @Path("{measureType}/{mid}")
     @Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
-    public HealthMeasureHistory getMeasureTypePidAndMid(@PathParam("measureType") String measureName, @PathParam("mid") String mid){
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n");
+    public String getMeasureTypePidAndMid(@PathParam("measureType") String measureName, @PathParam("mid") String mid){
+        //System.out.println("\n\n\n\n\n\n\n\n\n\n\n");
         Person p = Person.getPersonById(this.id);
         HealthMeasureHistory hmh  = HealthMeasureHistory.getHealthMeasureHistoryByPidAndMid(p,Integer.parseInt(mid));
-        System.out.println("\n\n\n\n\nDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD\n\n\n\n\n\n");
+        //System.out.println("\n\n\n\n\nDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD\n\n\n\n\n\n");
         if (hmh == null)
             throw new RuntimeException("Get: History for person " + id + " not found");
-        return hmh;
+        return hmh.getValue();
+    }
+
+    @PUT
+    @Path("{measureType}/{mid}")
+    @Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
+    public Response postMeasureTypePidAndMid(LifeStatus lf, @PathParam("measureType") String measureName, @PathParam("mid") String mid){
+        //System.out.println("\n\n\n\n\n\n\n\n\n\n\n");
+        Person p = Person.getPersonById(this.id);
+        HealthMeasureHistory hmh  = HealthMeasureHistory.getHealthMeasureHistoryByPidAndMid(p,Integer.parseInt(mid));
+        //System.out.println("\n\n\n\n\nDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD\n\n\n\n\n\n");
+        Response res;
+        if (hmh == null){
+            res = Response.status(404).entity("404 Not Found").build();
+            throw new NotFoundException("Get: Person with " + id + " not found",res);
+        }
+        hmh.setValue(lf.getValue());
+        HealthMeasureHistory.updateHealthMeasureHistory(hmh);
+        res = Response.ok(hmh).contentLocation(uriInfo.getAbsolutePath()).build();
+        return res;
+        //return hmh.getValue();
     }
 }
