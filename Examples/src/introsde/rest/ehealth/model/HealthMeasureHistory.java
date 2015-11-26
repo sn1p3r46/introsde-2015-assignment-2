@@ -6,6 +6,7 @@ import introsde.rest.ehealth.model.Person;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.Calendar;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -37,7 +38,9 @@ import javax.xml.bind.annotation.XmlTransient;
 	@NamedQueries({
 		@NamedQuery(name="HealthMeasureHistory.findAll", query="SELECT h FROM HealthMeasureHistory h"),
 		@NamedQuery(name="HealthMeasureHistory.findByMeasureAndPerson", query="SELECT hmh FROM HealthMeasureHistory hmh WHERE hmh.person = ?1 AND hmh.measureDefinition = ?2"),
-		@NamedQuery(name="HealthMeasureHistory.findByPidAndMid", query="SELECT h FROM HealthMeasureHistory h WHERE h.person = ?1 AND h.idMeasureHistory = ?2"),
+		@NamedQuery(name="HealthMeasureHistory.findByPidAndMid", query="SELECT hmh FROM HealthMeasureHistory hmh WHERE hmh.person = ?1 AND hmh.idMeasureHistory = ?2"),
+		@NamedQuery(name="HealthMeasureHistory.findMeasureByDate", query="SELECT hmh FROM HealthMeasureHistory hmh WHERE hmh.person = ?1 AND hmh.measureDefinition = ?2 "
+		+ "AND hmh.timestamp BETWEEN ?4 AND ?3")
 	})
 @XmlRootElement(name="measure")
 	public class HealthMeasureHistory implements Serializable {
@@ -147,6 +150,20 @@ import javax.xml.bind.annotation.XmlTransient;
 	List<HealthMeasureHistory> list = query.getResultList();
 	LifeCoachDao.instance.closeConnections(em);
 	return list;
+}
+
+public static List<HealthMeasureHistory> getMeasureByDate(MeasureDefinition mdef, Person p, Calendar from, Calendar to) {
+	EntityManager em = LifeCoachDao.instance.createEntityManager();
+	TypedQuery<HealthMeasureHistory> query = em.createNamedQuery("HealthMeasureHistory.findMeasureByDate", HealthMeasureHistory.class);
+	query.setParameter(1, p);
+	query.setParameter(2, mdef);
+	query.setParameter(3, from.getTime());
+	query.setParameter(4, to.getTime());
+
+	List<HealthMeasureHistory> hmhList = query.getResultList();
+		LifeCoachDao.instance.closeConnections(em);
+	return hmhList;
+
 }
 
 	public static List<HealthMeasureHistory> getAll() {

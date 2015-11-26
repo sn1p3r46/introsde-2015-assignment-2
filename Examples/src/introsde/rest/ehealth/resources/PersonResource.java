@@ -23,7 +23,9 @@ import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.NotFoundException;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Path;
-import java.util.Calendar;
+import javax.ws.rs.QueryParam;
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
 
 
 @Stateless // only used if the the application is deployed in a Java EE container
@@ -161,7 +163,10 @@ public class PersonResource {
     @GET
     @Path("{measureType}")
     @Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
-    public List<HealthMeasureHistory> getMeasureType(@PathParam("measureType") String measureName){
+    public List<HealthMeasureHistory> getMeasureType(@PathParam("measureType") String measureName, @QueryParam("after") String from, @QueryParam("before") String to) throws ParseException{
+        if(from != null && to != null){
+            return getPersonHistoryByDate(measureName,from,to);
+        }
 
     	//searches the measure definition associated with the name of the measure
     	MeasureDefinition mdef = new MeasureDefinition();
@@ -244,5 +249,31 @@ public class PersonResource {
         res = Response.ok(hmh).contentLocation(uriInfo.getAbsolutePath()).build();
         return res;
         //return hmh.getValue();
+    }
+
+//    @GET
+//    @Path("{measureTypeeee}")
+//    @Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
+    public List<HealthMeasureHistory> getPersonHistoryByDate(@PathParam("measureType") String measureName, @QueryParam("after") String to, @QueryParam("before") String from) throws ParseException {
+        Response res;
+
+    	MeasureDefinition mdef = MeasureDefinition.getMeasureDefinitionByName(measureName);
+
+    	Person person = this.getPersonById(id);
+
+        List<HealthMeasureHistory> hmhList = new ArrayList<HealthMeasureHistory>();
+    	if(from != null && to != null){
+        	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            Calendar calendarTo = Calendar.getInstance();
+            Calendar calendarFrom = Calendar.getInstance();
+        	calendarTo.setTime(dateFormat.parse(to));
+        	calendarFrom.setTime(dateFormat.parse(from));
+    		hmhList = HealthMeasureHistory.getMeasureByDate(mdef, person, calendarFrom, calendarTo);
+
+    	if (hmhList == null){
+    		throw new NotFoundException("No History for ID: " + id);
+            }
+    	}
+        return hmhList;
     }
 }

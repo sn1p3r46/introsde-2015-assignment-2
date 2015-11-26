@@ -20,6 +20,8 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
+import javax.ws.rs.QueryParam;
+
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
@@ -54,11 +56,16 @@ public class PersonCollectionResource {
 
     @GET
     @Produces({MediaType.TEXT_XML,  MediaType.APPLICATION_JSON ,  MediaType.APPLICATION_XML })
-    public List<Person> getPersons() {
-        System.out.println("Getting list of people...");
-        List<Person> people = Person.getAll();
-        return people;
-}
+    public List<Person> getPersonsByMinAndMax(@QueryParam("measureType") String measureName,@QueryParam("max") Double max, @QueryParam("min") Double min) {
+
+        List<Person> personList = new ArrayList<Person>();
+        if(measureName == null && min == null && max == null)
+        	return Person.getAll();
+        else{
+        	MeasureDefinition mdef = MeasureDefinition.getMeasureDefinitionByName(measureName);
+        	return Person.getByMeasureNameAndMinMax(mdef, min, max);
+        }
+    }
 
     // retuns the number of people
     // to get the total number of records
@@ -116,7 +123,6 @@ public class PersonCollectionResource {
     	}
     }
 
-    
 
     // Defines that the next path parameter after the base url is
     // treated as a parameter and passed to the PersonResources

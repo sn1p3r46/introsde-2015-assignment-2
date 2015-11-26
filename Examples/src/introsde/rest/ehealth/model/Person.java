@@ -26,7 +26,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @Entity  // indicates that this class is an entity to persist in DB
 @Table(name="Person") // to whole table must be persisted
-@NamedQuery(name="Person.findAll", query="SELECT p FROM Person p")
+@NamedQueries({
+	@NamedQuery(name="Person.findAll", query="SELECT p FROM  Person p"),
+    @NamedQuery(name="Person.findByMeasureNameAndMinMax",
+				query="SELECT p FROM Person p INNER JOIN p.lifeStatus l WHERE l.measureDefinition = ?1 AND CAST(l.value NUMERIC(10,2)) BETWEEN ?2 AND ?3")
+})
+
 @XmlRootElement
 @XmlType(propOrder={"idPerson", "name", "lastname" , "birthdate", "lifeStatus"})
 @JsonPropertyOrder({ "idPerson", "firstname", "lastname" , "birthdate", "lifeStatus"})
@@ -172,5 +177,18 @@ public class Person implements Serializable {
         tx.commit();
         LifeCoachDao.instance.closeConnections(em);
     }
+
+    public static List<Person> getByMeasureNameAndMinMax(MeasureDefinition md, Double min, Double max) {
+    EntityManager em = LifeCoachDao.instance.createEntityManager();
+    em.getEntityManagerFactory().getCache().evictAll();
+    TypedQuery<Person> query = em.createNamedQuery("Person.findByMeasureNameAndMinMax", Person.class);
+    query.setParameter(1, md);
+    query.setParameter(2, min);
+    query.setParameter(3, max);
+
+    List<Person> list = query.getResultList();
+    LifeCoachDao.instance.closeConnections(em);
+    return list;
+}
 
 }
