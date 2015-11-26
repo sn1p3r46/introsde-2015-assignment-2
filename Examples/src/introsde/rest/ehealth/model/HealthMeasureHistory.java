@@ -55,6 +55,7 @@ import javax.xml.bind.annotation.XmlTransient;
 	private int idMeasureHistory;
 
 	@Temporal(TemporalType.DATE)
+  @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd")
 	@Column(name="timestamp")
 	private Date timestamp;
 
