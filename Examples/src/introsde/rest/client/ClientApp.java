@@ -1,4 +1,4 @@
-package client;
+/*package client;
 
 import java.io.IOException;
 import java.io.StringReader;
@@ -95,6 +95,4 @@ public static void main(String[] args) {
       e.printStackTrace();
     }
   }
-
-}
-}
+}*/
