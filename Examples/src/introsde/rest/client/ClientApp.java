@@ -4,6 +4,9 @@ import introsde.rest.client.helpers.XmlHelper;
 
 import introsde.rest.client.helpers.XmlHelper;
 import introsde.rest.client.helpers.JsonHelper;
+import introsde.rest.client.helpers.PrettyStrings;
+import introsde.rest.client.helpers.StringHelper;
+
 import introsde.rest.client.schemas.generated.models.person.Person;
 import introsde.rest.client.schemas.generated.models.person.PersonList;
 import introsde.rest.client.schemas.generated.models.person.PersonObjectFactory;
@@ -57,34 +60,6 @@ import org.xml.sax.SAXException;
 
   public class ClientApp {
 
-  static final String appJson = MediaType.APPLICATION_JSON;
-	static final String appXml  = MediaType.APPLICATION_XML;
-	static String outputFormatPUT = "Request #%d: %s %s Accept: %s Content-type: %s\n"
-								 +"\t=> Result: %s\n"
-								 +"\t=> HTTP Status: %d\n\n"
-								 +"%s\n";
-
-	static String outputFormatGET = "Request #%d: %s %s Accept: %s\n"
-								 +"\t=> Result: %s\n"
-								 +"\t=> HTTP Status: %d\n\n"
-								 +"%s\n";
-
-	static String outputFormatDELETE = "Request #%d: %s %s\n"
-								 +"\t=> Result: %s\n"
-								 +"\t=> HTTP Status: %d\n\n";
-
-	static String mediaTypeHeader = "\n###################################################################\n"+
-									"#####\n"+
-									"###   Running tests with Accept and Content-type: %s\n"+
-									"#\n";
-
-	static String testHeader = "\n##############\n"+
-							   							 "## TEST %s ##\n"+
-							   					 		 "##############\n";
-
-	public static final String uriServer = "http://127.0.1.1:5700/sdelab";
-  public static final String error_E = "ERROR";
-  public static final String oK_ok = "OK";
 
 	public static String mediaType = null;
 
@@ -104,38 +79,31 @@ import org.xml.sax.SAXException;
 
 	public static void main(String[] args) throws JAXBException, IOException {
 		System.out.println("\n  ASSIGNMENT 2\n  STUDENT Andrea Galloni\n  E-MAIL: andrea[dot]galloni[at]studenti[dot]unitn[dot]it");
-		System.out.println("\n  Client Started.. \n  Server URI: " + uriServer);
+		System.out.println("\n  Client Started.. \n  Server URI: " + PrettyStrings.URI_SERVER);
 
 		pressAnyKeyToContinue();
 
 		ClientConfig clientConfig = new ClientConfig();
-		//Long timeout in case heroku server is sleeping
 		clientConfig.property(ClientProperties.CONNECT_TIMEOUT, 60*1000);
 		Client client = ClientBuilder.newClient(clientConfig);
-		service = client.target(uriServer);
+		service = client.target(PrettyStrings.URI_SERVER);
 
 		JAXBContext jaxbContext = JAXBContext.newInstance(PersonList.class);
     Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 
-    //We had written this file in marshalling example
-		File f = new File("peopleTest.xml");
-		String file_str = FileUtils.readFileToString(f);
-    PersonList people = (PersonList) jaxbUnmarshaller.unmarshal( f );
-		for (Person p : people.getpeople()) {
-		System.out.println(p.getFirstname());
-		}
 
-		test3_1(appXml);
-		test3_1(appJson);
+		test3_1(PrettyStrings.APP_XML);
+		test3_1(PrettyStrings.APP_JSON);
 
 		return;
 	}
 
 	private static void test3_1(String mediaType){
-	System.out.println(String.format(testHeader, "3.1"));
-	Response r = testGeneric("/person", "GET", mediaType, null);
+	System.out.println(String.format(PrettyStrings.HEADER, "3.1"));
+	Response r = testMe("/person", PrettyStrings.GET_STRING, mediaType, null);
 	PersonList people;
-	if(mediaType==appXml){
+
+	if(mediaType==PrettyStrings.APP_XML){
 			people = r.readEntity(new GenericType<PersonList>(){});
 	}else{
 		List<Person> plist = r.readEntity(new GenericType<List<Person>>(){});
@@ -143,8 +111,8 @@ import org.xml.sax.SAXException;
 		people.setpeople(plist);
 	}
 
-	String status = (people.getpeople().size()>1)? "OK" : "ERROR";
-	printResult(1, "GET", "/person", mediaType, status, r);
+	String status = (people.getpeople().size()>1)? PrettyStrings.OK_OK : PrettyStrings.ERROR_E;
+	StringHelper.prettyResultPrinter(1, PrettyStrings.GET_STRING, "/person", mediaType, status, r);
 
 	if(people.getpeople().size()>0){
 		firstPerson = people.getpeople().get(0);
@@ -157,12 +125,20 @@ import org.xml.sax.SAXException;
 	}
 }
 
-	private static void pressAnyKeyToContinue(){
-         System.out.println("\n \n  Press any key to continue... \n \n");
-         try{System.in.read();}
-         catch(Exception e){}}
+private static void test3_2(String mediaType){
+	System.out.println(String.format(PrettyStrings.HEADER, "3.2"));
+	Response r = testMe("/person/"+firstPerson.getIdPerson(), PrettyStrings.GET_STRING, mediaType, null);
+	String status = (r.getStatus() == 200 || r.getStatus() == 202)? PrettyStrings.OK_OK : PrettyStrings.ERROR_E;
+	StringHelper.prettyResultPrinter(2, PrettyStrings.GET_STRING, "/person/" + firstPerson.getIdPerson(), mediaType, status, r);
+}
 
-	private static Response testGeneric(String URIPath,  String method, String mediaType, Object requestBody){
+	private static void pressAnyKeyToContinue(){
+   System.out.println("\n \n  Press any key to continue... \n \n");
+   try{System.in.read();}
+   catch(Exception e){}
+	}
+
+	private static Response testMe(String URIPath,  String method, String mediaType, Object requestBody){
 	Response response = null;
 	Invocation.Builder builder = service.path(URIPath)
 			.request()
@@ -178,13 +154,13 @@ import org.xml.sax.SAXException;
 		}
 	}
 
-	if(method.equals("GET")){
+	if(method.equals(PrettyStrings.GET_STRING)){
 		response = builder.get();
 	} else if(method.equals("POST")){
 		response = builder.post(body);
-	} else if(method.equals("PUT")){
+	} else if(method.equals(PrettyStrings.PUT_STRING)){
 		response = builder.put(body);
-	} else if(method.equals("DELETE")){
+	} else if(method.equals(PrettyStrings.DELETE_STRING)){
 		response = builder.delete();
 	} else {
 		throw new RuntimeException("Unexpected HTTP method: "+method);
@@ -192,21 +168,6 @@ import org.xml.sax.SAXException;
 
 	response.bufferEntity();
 	return response;
-}
-
-private static void printResult(int reqNumber, String reqMethod, String path, String acceptType, String statusString, Response r){
-	int statusCode = r.getStatus();
-	String result = r.readEntity(String.class);
-	String prettyPrint = "";
-	if(result != null && result.length() !=0){
-		prettyPrint = (r.getMediaType().toString().equals(MediaType.APPLICATION_XML))? XmlHelper.prettyXML(result, 5): JsonHelper.prettyJSON(result, 5);
-		}
-	if(reqMethod.equals("GET")){
-		System.out.println(String.format(outputFormatGET, reqNumber, reqMethod, path , acceptType, statusString, statusCode, prettyPrint));
-	} else if(reqMethod.equals("PUT") || reqMethod.equals("POST")){
-		System.out.println(String.format(outputFormatPUT, reqNumber, reqMethod, path , acceptType, r.getMediaType().toString(), statusString, statusCode, prettyPrint));
-	} else if(reqMethod.equals("DELETE")){
-		System.out.println(String.format(outputFormatDELETE, reqNumber, reqMethod, path, statusString, statusCode));
-		}
 	}
+
 }
