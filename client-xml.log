@@ -1,0 +1,7 @@
+     [echo] 'execute.client' target has been called
+     [java] Server URL : http://127.0.1.1:5700/sdelab
+     [java] MediaType  : application/xml
+     [java] Ciao soono QUI
+     [java] java.lang.NullPointerException
+     [java] 	at introsde.rest.client.ClientApp.getPeople(Unknown Source)
+     [java] 	at introsde.rest.client.ClientApp.main(Unknown Source)

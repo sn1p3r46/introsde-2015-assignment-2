@@ -23,11 +23,9 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.persistence.NamedQuery;
 import javax.persistence.NamedQueries;
 import javax.persistence.TypedQuery;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * The persistent class for the "LifeStatus" database table.
- *
- */
+
 @Entity
 @Table(name = "LifeStatus")
 @NamedQueries({

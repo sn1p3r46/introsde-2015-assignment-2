@@ -103,6 +103,25 @@
                 </fileset>
             </copy>
         </target>
+        <target name="compile" depends="clean">
+            <echo message="Compile target has been called" />
+            <mkdir dir="${build.dir}" />
+            <echo message="${build.dir} has been created" />
+            <javac srcdir="${src.dir}" destdir="${build.dir}" classpathref="lib.path.id" includeAntRuntime="false">
+            </javac>
+            <copy todir="${build.dir}" overwrite="true">
+                <fileset dir="${src.dir}">
+                    <include name="*.xml" />
+                    <include name="**/*.xml" />
+                </fileset>
+            </copy>
+            <copy todir="${build.dir}" overwrite="true">
+                <fileset dir="${webcontent.dir}">
+                    <include name="*.xml" />
+                    <include name="**/*.xml" />
+                </fileset>
+            </copy>
+        </target>
         <target name="start">
             <echo message="app start introsde.rest.ehealth.App in ${build.dir}" />
             <java classname="introsde.rest.ehealth.App" classpath="${build.dir}" fork="true">
@@ -117,7 +136,7 @@
             </java>
         </target>
         <target name="prova">
-            <echo message="app start introsde.rest.ehealth.App in ${build.dir}" />
+            <echo message="app start introsde.rest.client.ClientApp in ${build.dir}" />
             <java classname="introsde.rest.client.ClientApp" classpath="${build.dir}" fork="true">
                 <arg value="$JAVA_OPTS  -cp" />
                 <classpath>
@@ -150,8 +169,8 @@
                 </batchtest>
             </junit>
         </target>
-
-        <target name="execute.client">
+<!--
+        <target name="execute.clientXML">
     		<record name="client-xml.log" action="start" append="no"/>
     		<echo message="'execute.client' target has been called"/>
     		<java classname="introsde.rest.client.ClientApp" classpath="${build.dir}" fork="true">
@@ -168,6 +187,23 @@
     		<record name="client-xml.log" action="stop"/>
     		<echo message="Created the file client-xml.log containing the output of the execute.client target" />
     	</target>
+        <target name="execute.clientJSON">
+    		<record name="client-xml.log" action="start" append="no"/>
+    		<echo message="'execute.client' target has been called"/>
+    		<java classname="introsde.rest.client.ClientApp" classpath="${build.dir}" fork="true">
+                <arg value="$JAVA_OPTS  -cp" />
+                <arg value="JSON"/>
+    			<classpath>
+    				<path location="build" />
+                    <fileset dir="WebContent/WEB-INF/lib">
+                        <include name="**/*.jar" />
+                        <include name="*.jar" />
+                    </fileset>
+    			</classpath>
+    		</java>
+    		<record name="client-xml.log" action="stop"/>
+    		<echo message="Created the file client-xml.log containing the output of the execute.client target" />
+    	</target> -->
         <!-- make sure you have created first the WebContent folder, including a META-INF folder, WEB-INF/web.xml file and WEB-INF/lib folder -->
         <target name="create.war" depends="install">
             <war destfile="sdelab06.war" webxml="${web.dir}/WebContent/WEB-INF/web.xml">
