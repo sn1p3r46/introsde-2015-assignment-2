@@ -35,7 +35,7 @@ public class PrettyStrings {
 									"###   Running tests with Accept and Content-type: %s\n"+
 									"#\n";
 
-	public static String HEADER = "\n##############\n"+
-							   							 "## TEST %s ##\n"+
-							   					 		 "##############\n";
+	public static String HEADER = "\n\t\t\t##############\n"+
+							   							 "\t\t\t## TEST %s ##\n"+
+							   					 		 "\t\t\t##############\n";
 }

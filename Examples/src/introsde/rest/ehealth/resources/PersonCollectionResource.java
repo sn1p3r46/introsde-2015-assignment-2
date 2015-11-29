@@ -1,4 +1,5 @@
 package introsde.rest.ehealth.resources;
+
 import introsde.rest.ehealth.model.Person;
 import introsde.rest.ehealth.dao.LifeCoachDao;
 import introsde.rest.ehealth.model.LifeStatus;
@@ -78,7 +79,7 @@ public class PersonCollectionResource {
         int count = people.size();
         return String.valueOf(count);
     }
-
+    /*
     @POST
     @Produces({MediaType.APPLICATION_JSON ,  MediaType.APPLICATION_XML})
     @Consumes({MediaType.APPLICATION_JSON ,  MediaType.APPLICATION_XML})
@@ -91,23 +92,49 @@ public class PersonCollectionResource {
     		//removes the life statuses in the persons and puts them in another variable
             List<LifeStatus> lfCopy = new ArrayList<LifeStatus>();
             for(int i=0; i<person.getLifeStatus().size(); i++){
+                System.out.println(person.getLifeStatus().get(i).getIdMeasure());
                 lfCopy.add(person.getLifeStatus().get(i));
             }
+            for(int i=0; i<person.getLifeStatus().size(); i++){
+                System.out.println(lfCopy.get(i).getMeasureDefinition().getMeasureName());
+                System.out.println(person.getLifeStatus().get(i).getIdMeasure());
+            }
+            System.out.println("! ! ! ! Press Any Key To Continue...");
+                new java.util.Scanner(System.in).nextLine();
+            if(lfCopy == null || person.getLifeStatus()==null){
+                System.out.println("SONO NULLO ! ! ! ! Press Any Key To Continue...");
+                    new java.util.Scanner(System.in).nextLine();
+            }
+
     		person.setLifeStatus(null);
 
     		Person p = Person.savePerson(person);
     		int pid = p.getIdPerson();
+            System.out.println(p.getIdPerson());
+            if(p==null){
+                System.out.println("P è nullo");
+            }
 
     		Calendar today = Calendar.getInstance();
 
     		for(int i=0; i<lfCopy.size(); i++){
+                System.out.println(lfCopy.size());
+                System.out.println("! ! ! ! Press Any Key To Continue...");
+                    new java.util.Scanner(System.in).nextLine();
     			lfCopy.get(i).setPerson(p);
     			HealthMeasureHistory story = new HealthMeasureHistory();
 
     			String measureName = lfCopy.get(i).getMeasureDefinition().getMeasureName();
+                System.out.println(measureName);
+                System.out.println("! ! ! ! Press Any Key To Continue...");
+                    new java.util.Scanner(System.in).nextLine();
     			MeasureDefinition existingDefinition = new MeasureDefinition();
     			existingDefinition = MeasureDefinition.getMeasureDefinitionByName(measureName);
-
+                if(existingDefinition==null){
+                    System.out.println("existingDef is null ");
+                    System.out.println("! ! ! ! Press Any Key To Continue...");
+                        new java.util.Scanner(System.in).nextLine();
+                }
     			if (existingDefinition != null){
     				lfCopy.get(i).setMeasureDefinition(existingDefinition);
     				story.setMeasureDefinition(existingDefinition);
@@ -123,7 +150,62 @@ public class PersonCollectionResource {
     	}
     }
 
+*/
 
+@POST
+@Produces({MediaType.APPLICATION_JSON ,  MediaType.APPLICATION_XML})
+@Consumes({MediaType.APPLICATION_JSON ,  MediaType.APPLICATION_XML})
+public Person newPerson(Person person) throws IOException {
+    System.out.println("Creating new person...");
+    // checks if person includes life statuses, in other words a 'healthprofile'
+    if(person.getLifeStatus() == null){
+        return Person.savePerson(person);
+    }else{
+        //removes the life statuses in the persons and puts them in another variable
+        ArrayList<LifeStatus> list_lifeStatus = new ArrayList<>();
+        list_lifeStatus.addAll(person.getLifeStatus());
+        person.setLifeStatus(null);
+
+        //saves the person in the database and retrieve the id
+        Person p = Person.savePerson(person);
+        int id_person = p.getIdPerson();
+
+        //creates the today date
+        Calendar today = Calendar.getInstance();
+
+        //the use of this list avoid the insertion of the same measure multiple time
+        //the list stores progressively the measure already inserted
+        ArrayList<Integer> control = new ArrayList<>();
+
+        //iterates on all 'lifestatus' the client wants to insert
+        for(int i=0; i<list_lifeStatus.size(); i++){
+            //associates the 'lifestatus' with the person
+            list_lifeStatus.get(i).setPerson(p);
+            HealthMeasureHistory history_element = new HealthMeasureHistory();
+
+            //retrieves the name of the measures inserted by the client (e.g. weight)
+            String measureName = list_lifeStatus.get(i).getMeasureDefinition().getMeasureName();
+
+            //searches the measure definition associated with the name of the measure
+            MeasureDefinition temp = new MeasureDefinition();
+            temp = MeasureDefinition.getMeasureDefinitionByName(measureName);
+
+            if (temp != null && !control.contains(temp.getIdMeasureDef())){
+                control.add(temp.getIdMeasureDef());
+                //associates the lifestatus with the corresponding measureDefinition
+                list_lifeStatus.get(i).setMeasureDefinition(temp);
+                //saves the new measure value of the lifestatus also in the history
+                history_element.setMeasureDefinition(temp);
+                history_element.setPerson(p);
+                history_element.setValue(list_lifeStatus.get(i).getValue());
+                history_element.setTimestamp(today.getTime());
+                LifeStatus.saveLifeStatus(list_lifeStatus.get(i));  //saves lifestatus in the db
+                HealthMeasureHistory.saveHealthMeasureHistory(history_element);
+            }
+        }
+        return Person.getPersonById(id_person);
+    }
+}
     // Defines that the next path parameter after the base url is
     // treated as a parameter and passed to the PersonResources
     // Allows to type http://localhost:599/base_url/1

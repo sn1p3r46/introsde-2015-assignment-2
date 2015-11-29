@@ -11,15 +11,22 @@ package introsde.rest.client.schemas.generated.models.person;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.datatype.XMLGregorianCalendar;
+import javax.xml.bind.annotation.XmlElementWrapper;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+/*
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "idPerson",
@@ -28,27 +35,45 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "birthdate",
     "healthprofile"
 })
+@JsonPropertyOrder({ "idPerson", "firstname", "lastname" , "birthdate", "healfesthprofile"})
 @XmlRootElement(name = "person")
+*/
+@XmlAccessorType(XmlAccessType.FIELD)
+/*@XmlType(name = "", propOrder = {
+    "idPerson",
+    "firstname",
+    "lastname",
+    "birthdate",
+    "healthprofile"
+})*/
+
+@XmlRootElement
+@XmlType(propOrder={"idPerson", "firstname", "lastname" , "birthdate", "healthprofile"})
+@JsonPropertyOrder({ "idPerson", "firstname", "lastname" , "birthdate", "healthprofile"})
+
 public class Person {
 
-    @XmlElement(required = true)
-    protected BigInteger idPerson;
+    //@XmlElement(required = true)
+    protected int idPerson;
     @XmlElement(required = true)
     protected String firstname;
     @XmlElement(required = true)
     protected String lastname;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar birthdate;
-    @XmlElement(name = "healthprofile", required = true)
+    protected Date birthdate;
+
+    @XmlElementWrapper(name = "healthprofile")
+    @XmlElement(name="measureType")
+    @JsonProperty("healthprofile")
     protected List<Person.MeasureType> healthprofile;
 
-
-    public BigInteger getIdPerson() {
+    @XmlTransient
+    public int getIdPerson() {
         return idPerson;
     }
 
-    public void setIdPerson(BigInteger value) {
+    public void setIdPerson(int value) {
         this.idPerson = value;
     }
 
@@ -68,15 +93,32 @@ public class Person {
         this.lastname = value;
     }
 
-    public XMLGregorianCalendar getBirthdate() {
+    public Date getBirthdate() {
         return birthdate;
     }
 
-    public void setBirthdate(XMLGregorianCalendar value) {
+    public void setBirthdate(Date value) {
         this.birthdate = value;
     }
 
+    public void setHealtProfile(List<Person.MeasureType> healthprofile){
+        this.healthprofile = healthprofile;
+    }
 
+    public List<Person.MeasureType> getHealtProfile(){
+        return healthprofile;
+    }
+
+    public void createHealthProfile(){
+        this.healthprofile = new ArrayList<Person.MeasureType>();
+    }
+
+    public void addMeasure(String name, String value){
+        Person.MeasureType measure = new Person.MeasureType();
+        measure.setMeasure(name);
+        measure.setValue(value);
+        this.healthprofile.add(measure);
+    }
 
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "measureType", propOrder = {
@@ -87,7 +129,7 @@ public class Person {
 
         @XmlElement(required = true)
         protected String measure;
-        protected float value;
+        protected String value;
 
         public String getMeasure() {
             return measure;
@@ -97,11 +139,11 @@ public class Person {
             this.measure = value;
         }
 
-        public float getValue() {
+        public String getValue() {
             return value;
         }
 
-        public void setValue(float value) {
+        public void setValue(String value) {
             this.value = value;
         }
     }

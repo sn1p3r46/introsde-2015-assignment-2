@@ -58,6 +58,12 @@ public class LifeStatus implements Serializable {
 	public LifeStatus() {
 	}
 
+	public LifeStatus(Person person, MeasureDefinition md, String value) {
+		this.person = person;
+		this.measureDefinition = md;
+		this.value = value;
+	}
+
 	@XmlTransient
 	public int getIdMeasure() {
 		return this.idMeasure;

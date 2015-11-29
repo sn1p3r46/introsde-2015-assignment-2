@@ -59,6 +59,9 @@ public class MeasureDefinition implements Serializable {
 
 	public MeasureDefinition() {
 	}
+	public MeasureDefinition(String s){
+		MeasureDefinition.getMeasureDefinitionByName(s);
+	}
 
 	@XmlTransient
 	public int getIdMeasureDef() {
@@ -78,6 +81,7 @@ public class MeasureDefinition implements Serializable {
 	public void setMeasureName(String measureName) {
 		this.measureName = measureName;
 	}
+	
 	@XmlTransient
 	public String getMeasureType() {
 		return this.measureType;
@@ -109,7 +113,7 @@ public class MeasureDefinition implements Serializable {
 	    LifeCoachDao.instance.closeConnections(em);
 	    return list;
 	}
-	
+
 	public static MeasureDefinition saveMeasureDefinition(MeasureDefinition p) {
 		EntityManager em = LifeCoachDao.instance.createEntityManager();
 		EntityTransaction tx = em.getTransaction();
@@ -145,6 +149,7 @@ public class MeasureDefinition implements Serializable {
 		try{
 		MeasureDefinition p = em.createNamedQuery("MeasureDefinition.getMeasureDefinitionByName", MeasureDefinition.class).setParameter(1, measureName).getSingleResult();
 		LifeCoachDao.instance.closeConnections(em);
+		if(p==null){ System.out.println("Sono nullo MDEF.JAVA 151"); }
 		return p;
 		}
 		catch(Exception e){

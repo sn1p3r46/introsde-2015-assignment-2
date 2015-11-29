@@ -35,8 +35,6 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @XmlRootElement
 @XmlType(propOrder={"idPerson", "name", "lastname" , "birthdate", "lifeStatus"})
 @JsonPropertyOrder({ "idPerson", "firstname", "lastname" , "birthdate", "lifeStatus"})
-
-
 public class Person implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id // defines this attributed as the one that identifies the entity

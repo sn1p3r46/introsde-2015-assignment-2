@@ -74,8 +74,10 @@ public class PersonResource {
     public Person getPersonHTML() {
         Person person = this.getPersonById(id);
         if (person == null){
-            Response res = Response.status(404).build();
-            throw new NotFoundException("Get: Person with " + id + " not found",res);
+            //Response res = Response.status(404).build();
+            throw new NotFoundException("Delete: Person with " + id
+        + " not found");
+            //throw new NotFoundException("Get: Person with " + id + " not found",res);
             //return Response.status(404).entity(yourMessage).type( getAcceptType()).build();
         }
         System.out.println("Returning person... " + person.getIdPerson());
@@ -84,7 +86,8 @@ public class PersonResource {
 
     @PUT
     @Consumes({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
-	public Response putPerson(Person person) {
+    @Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
+	public Person putPerson(Person person) {
         Response res;
         Person existing = getPersonById(this.id);
 
@@ -102,6 +105,7 @@ public class PersonResource {
             // actually i've putted the response to "created" because a new entity is just created
             // in the existing case the response will be a generic OK response
             res = Response.created(uriInfo.getAbsolutePath()).build();
+
             // in my opinion this was not very correct: res = Response.noContent().build();
         } else {
             System.out.println("--> Updating Person... " +this.id);
@@ -126,17 +130,20 @@ public class PersonResource {
             // We create an "ok" response because the request have been well accomplished
             res = Response.ok().build();
         }
-        return res;
+        return getPersonById(this.id);
     }
 
 
     @DELETE
-    public Response deletePerson() {
+    public void deletePerson() {
         Person person = getPersonById(id);
         if (person != null){
             Person.removePerson(person);
         }
-        return Response.ok().build();
+        else{
+            throw new NotFoundException("Delete: Person with " + id
+        + " not found");
+        }
     }
 
 	public Person getPersonById(int personId) {
