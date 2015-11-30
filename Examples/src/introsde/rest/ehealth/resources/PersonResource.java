@@ -190,13 +190,13 @@ public class PersonResource {
     @Path("{measureType}")
     @Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
     @Consumes({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
-    public Response setMeasureType(LifeStatus lf, @PathParam("measureType") String measureName){
+    public LifeStatus setMeasureType(LifeStatus lf, @PathParam("measureType") String measureName){
 
         Person p = Person.getPersonById(this.id);
 
-    	if(p == null){
-    		return Response.status(Status.NOT_FOUND).build();
-    	}
+    	//if(p == null){
+    	//	return Response.status(Status.NOT_FOUND).build();
+    	//}
         System.out.println("\n\n\n\n\n\n\n\n\n"+lf.getValue()+"\n\n\n\n\n\n\n\n\n");
         //searches the measure definition associated with the name of the measure
 
@@ -222,20 +222,21 @@ public class PersonResource {
         HealthMeasureHistory.saveHealthMeasureHistory(hmh);
         //if (hmh == null)
         //    throw new RuntimeException("Get: History for person " + id + " not found");
-        return Response.created(uriInfo.getAbsolutePath()).build();
+        return LifeStatus.getLifeStatusById(lf.getIdMeasure());
+//        return Response.created(uriInfo.getAbsolutePath()).build();
     }
 
     @GET
     @Path("{measureType}/{mid}")
     @Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
-    public String getMeasureTypePidAndMid(@PathParam("measureType") String measureName, @PathParam("mid") String mid){
+    public HealthMeasureHistory getMeasureTypePidAndMid(@PathParam("measureType") String measureName, @PathParam("mid") String mid){
         //System.out.println("\n\n\n\n\n\n\n\n\n\n\n");
         Person p = Person.getPersonById(this.id);
         HealthMeasureHistory hmh  = HealthMeasureHistory.getHealthMeasureHistoryByPidAndMid(p,Integer.parseInt(mid));
         //System.out.println("\n\n\n\n\nDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD\n\n\n\n\n\n");
         if (hmh == null)
             throw new RuntimeException("Get: History for person " + id + " not found");
-        return hmh.getValue();
+        return hmh;//.getValue();
     }
 
     @PUT

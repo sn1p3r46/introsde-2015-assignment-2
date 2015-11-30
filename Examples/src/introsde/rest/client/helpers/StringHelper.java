@@ -20,9 +20,10 @@ import javax.ws.rs.core.MediaType;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import java.util.Random;
 
 public class StringHelper {
-
+/*
     public String formatXml(String unformattedXml) {
     	Transformer transformer;
 		try {
@@ -65,6 +66,13 @@ public class StringHelper {
 			return unformattedJson;
 		}
     }
+    */
+
+    public static String randIntString(int min, int max) {
+    Random rand = new Random();
+    int randomNum = rand.nextInt((max - min) + 1) + min;
+    return String.valueOf(randomNum);
+}
 
     public static void prettyResultPrinter(int reqNumber, String reqMethod, String path, String acceptType, String statusString, Response r){
     	int statusCode = r.getStatus();
@@ -79,6 +87,6 @@ public class StringHelper {
     		System.out.println(String.format(PrettyStrings.PUT_OUTPUT, reqNumber, reqMethod, path , acceptType, r.getMediaType().toString(), statusString, statusCode, prettyPrint));
     	} else if(reqMethod.equals(PrettyStrings.DELETE_STRING)){
     		System.out.println(String.format(PrettyStrings.DEL_OUTPUT, reqNumber, reqMethod, path, statusString, statusCode));
-    		}
     	}
+    }
 }

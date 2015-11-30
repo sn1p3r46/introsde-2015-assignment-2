@@ -13,6 +13,11 @@ import introsde.rest.client.schemas.generated.models.person.PersonObjectFactory;
 import introsde.rest.client.schemas.generated.models.SMeasureType;
 import introsde.rest.client.schemas.generated.models.MeasureTypeList;
 import introsde.rest.client.schemas.generated.models.HealthMeasureHistory;
+import introsde.rest.client.schemas.generated.models.HealthMeasure;
+
+import introsde.rest.client.schemas.generated.models.MeasureGet;
+import introsde.rest.client.schemas.generated.models.MeasureGetList;
+import introsde.rest.client.schemas.generated.models.MeasurePost;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -60,6 +65,9 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
+import java.util.Calendar;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.JsonProcessingException;
 
 
   public class ClientApp {
@@ -98,6 +106,60 @@ import org.xml.sax.SAXException;
     Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 */
 // /*
+
+
+		//MeasureTypes ms = new MeasureTypes();
+		//ms.createMeasureType();
+		//ms.addMeasure("ciaone");
+		//ms.addMeasure("cidcdddddaone");
+/*
+		MeasureGetList mgl = new MeasureGetList();
+		MeasureGet mg1 = new MeasureGet("121", "height", "172", null);	//Calendar.getInstance().getTime());
+		MeasureGet mg2 = new MeasureGet("122", "weight", "72", null);		//Calendar.getInstance().getTime());
+		mg1.setIdMeasureHistory(null);
+		mg2.setIdMeasureHistory(null);
+
+		mgl.addMeasure(mg1);
+		mgl.addMeasure(mg2);
+
+	  try {
+
+		File file = new File("file.xml");
+		JAXBContext jaxbContext = JAXBContext.newInstance(MeasureGetList.class);
+		Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+
+		// output pretty printed
+		jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+		jaxbMarshaller.marshal(mgl, file);
+		jaxbMarshaller.marshal(mgl, System.out);
+
+		Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+		MeasureGetList mgll = (MeasureGetList) jaxbUnmarshaller.unmarshal(file);
+		System.out.println(mgll.getMeasureList().get(0).getIdMeasureHistory());
+
+		JAXBContext jaxbContext1 = JAXBContext.newInstance(MeasurePost.class);
+		Marshaller jaxbMarshaller1 = jaxbContext1.createMarshaller();
+
+		jaxbMarshaller1.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+		MeasurePost mp = new MeasurePost("Nome","Valore");
+		System.out.println(mp.getMeasure());
+		System.out.println(mp.getValue());
+
+		jaxbMarshaller1.marshal(mp, file);
+		jaxbMarshaller1.marshal(mp, System.out);
+
+
+
+	      } catch (JAXBException e) {
+		e.printStackTrace();
+	      }
+
+		//return;
+*/
+
+		pressAnyKeyToContinue();
 		test3_1(PrettyStrings.APP_XML);
 		pressAnyKeyToContinue();
 		test3_1(PrettyStrings.APP_JSON);
@@ -115,34 +177,34 @@ import org.xml.sax.SAXException;
 		test3_4(PrettyStrings.APP_JSON);
 		pressAnyKeyToContinue();
 		test3_5(PrettyStrings.APP_XML);
-/*
-		MeasureTypes ms = new MeasureTypes();
-		ms.createMeasureType();
-		ms.addMeasure("ciaone");
-		ms.addMeasure("cidcdddddaone");
-
-
-	  try {
-
-		File file = new File("file.xml");
-		JAXBContext jaxbContext = JAXBContext.newInstance(MeasureTypes.class);
-		Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
-
-		// output pretty printed
-		jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-
-		jaxbMarshaller.marshal(ms, file);
-		jaxbMarshaller.marshal(ms, System.out);
-
-	      } catch (JAXBException e) {
-		e.printStackTrace();
-	      }
-
-		return;
-		*/
+		pressAnyKeyToContinue();
 		test3_6(PrettyStrings.APP_JSON);
+		pressAnyKeyToContinue();
 		test3_6(PrettyStrings.APP_XML);
+		pressAnyKeyToContinue();
 		test3_7(PrettyStrings.APP_XML);
+		pressAnyKeyToContinue();
+		test3_7(PrettyStrings.APP_JSON);
+		pressAnyKeyToContinue();
+		test3_8(PrettyStrings.APP_XML);
+		pressAnyKeyToContinue();
+		test3_8(PrettyStrings.APP_JSON);
+		pressAnyKeyToContinue();
+		test3_9(PrettyStrings.APP_XML);
+		pressAnyKeyToContinue();
+		test3_9(PrettyStrings.APP_JSON);
+		test3_10(PrettyStrings.APP_XML);
+		pressAnyKeyToContinue();
+		test3_10(PrettyStrings.APP_JSON);
+		pressAnyKeyToContinue();
+		test3_11(PrettyStrings.APP_XML);
+		pressAnyKeyToContinue();
+		test3_11(PrettyStrings.APP_JSON);
+		pressAnyKeyToContinue();
+		test3_12(PrettyStrings.APP_XML);
+		pressAnyKeyToContinue();
+		test3_12(PrettyStrings.APP_JSON);
+		pressAnyKeyToContinue();
 	}
 
 	private static void test3_1(String mediaType){
@@ -216,7 +278,7 @@ private static void test3_4(String mediaType){
 	Person returnedPerson = r.readEntity(Person.class);
 	String status = (returnedPerson.getIdPerson() != 0 && (r.getStatus() == 200 || r.getStatus() == 201 || r.getStatus() == 202))? PrettyStrings.OK_OK : PrettyStrings.ERROR_E;
 
-	StringHelper.prettyResultPrinter(4, PrettyStrings.POST_STRING, "/person", mediaType, status, r);
+	StringHelper.prettyResultPrinter(4, PrettyStrings.POST_STRING, "/person", PrettyStrings.APP_XML, status, r);
 
 	createdPerson = returnedPerson;
 
@@ -268,14 +330,19 @@ private static void test3_7(String mediaType){
 	pList.add(firstPerson);
 	pList.add(lastPerson);
 	HealthMeasureHistory m = null;
-
-	// TODO JSON compatibility!!!
-
+	if(mediaType.equals(PrettyStrings.APP_JSON)){
+		m = new HealthMeasureHistory();
+	}
 	Response r = null;
 	for(Person pIterator:pList){
 		for(String mName:msc.getMeasureTypes()){
 			r = testMe("/person/"+pIterator.getIdPerson()+"/"+mName, PrettyStrings.GET_STRING, mediaType, null);
+			if(mediaType.equals(PrettyStrings.APP_XML)){
 			m = r.readEntity(HealthMeasureHistory.class);
+		} else{
+			List<HealthMeasure> measure = r.readEntity(new GenericType<List<HealthMeasure>>(){});
+			m.setHealthMeasure(measure);
+		}
 			if(m!=null && m.getHealthMeasure().size()>0){
 				status = PrettyStrings.OK_OK;
 				ClientApp.measure_id = m.getHealthMeasure().get(0).getIdMeasureHistory();
@@ -284,10 +351,89 @@ private static void test3_7(String mediaType){
 			}
 		}
 	}
-	//status = (m.getHealthMeasure().size()>2)? PrettyStrings.OK_OK : PrettyStrings.ERROR_E;
-	StringHelper.prettyResultPrinter(9, PrettyStrings.GET_STRING, "/measureTypes", mediaType, status, r);
+StringHelper.prettyResultPrinter(9, PrettyStrings.GET_STRING, "/person/"+ClientApp.myPerson.getIdPerson()+"/"+ClientApp.measure_Type, mediaType, status, r);
 }
 
+private static void test3_8(String mediaType){
+	System.out.println(String.format(PrettyStrings.HEADER, "3.8"));
+	Response r = testMe("/person/" + ClientApp.myPerson.getIdPerson()+"/" + ClientApp.measure_Type + "/" + ClientApp.measure_id, PrettyStrings.GET_STRING, mediaType, null);
+	String status = (r.getStatus() == 200) ? PrettyStrings.OK_OK : PrettyStrings.ERROR_E;
+	StringHelper.prettyResultPrinter(7, PrettyStrings.GET_STRING, "/person/" + ClientApp.myPerson.getIdPerson()+"/" + ClientApp.measure_Type + "/" + ClientApp.measure_id, mediaType, status, r);
+}
+
+
+
+private static void test3_10(String mediaType){
+	System.out.println(String.format(PrettyStrings.HEADER, "E10"));
+	System.out.println("\n\n NOW WE ARE GOING TO UPDATE SOME VALUES\n\n EXTRA POINTS 10\n");
+	Response r = testMe("/person/" + ClientApp.myPerson.getIdPerson()+"/" + ClientApp.measure_Type + "/" + ClientApp.measure_id, PrettyStrings.GET_STRING, mediaType, null);
+	String status = (r.getStatus() == 200) ? PrettyStrings.OK_OK : PrettyStrings.ERROR_E;
+
+	MeasureGet m;
+	m = r.readEntity(MeasureGet.class);
+	String old_val = m.getValue();
+
+	StringHelper.prettyResultPrinter(7, PrettyStrings.GET_STRING, "/person/" + ClientApp.myPerson.getIdPerson()+"/" + ClientApp.measure_Type + "/" + ClientApp.measure_id, mediaType, status, r);
+	System.out.println("\n\n NOW WE ARE GOING TO SEND THE POST REQUEST\n\n EXTRA POINTS 10\n");
+
+	MeasurePost mp = new MeasurePost(null,StringHelper.randIntString(1,1000));
+	r = testMe("/person/" + ClientApp.myPerson.getIdPerson()+"/" + ClientApp.measure_Type + "/" + ClientApp.measure_id, PrettyStrings.PUT_STRING, mediaType, mp);
+
+	m = r.readEntity(MeasureGet.class);
+	String new_val = m.getValue();
+	StringHelper.prettyResultPrinter(10, PrettyStrings.PUT_STRING, "/person/"+firstPerson.getIdPerson(), mediaType, status, r);
+
+	System.out.println("\n\nTHE MEASURE VALUE IS CHANGED FROM "+ old_val +" TO "+ new_val + "\n");
+}
+
+private static void test3_11(String mediaType){
+
+	System.out.println(String.format(PrettyStrings.HEADER, "E11"));
+
+	System.out.println("\n\n NOW WE ARE GOING TO FILTER BY DATE A VALUE: BMI \n\n EXTRA POINTS 11\n");
+	System.out.println("\n\n FIRST WE PRINT ALL HISTORY OF BMI MEASUREMENTS:\n");
+
+	Response r = testMe("/person/10000/bmi", PrettyStrings.GET_STRING, mediaType, null);
+	StringHelper.prettyResultPrinter(11, PrettyStrings.GET_STRING, "/person/10000/bmi", mediaType, PrettyStrings.OK_OK, r);
+
+	System.out.println("\n\n THEN WE PRINT FILTERED RESULTS BY DATE (SEE URL):\n");
+
+	ClientConfig clientConfig1 = new ClientConfig();
+	Client client = ClientBuilder.newClient(clientConfig1);
+	URI uri = UriBuilder.fromUri(PrettyStrings.URI_SERVER).build();
+	service = client.target(uri);
+	Response response = service.path("/person/10000/bmi")
+			.queryParam("before", "2015-11-11").queryParam("after", "2011-12-08")
+			.request(mediaType).get(Response.class);
+
+	StringHelper.prettyResultPrinter(11, PrettyStrings.GET_STRING, "/person/10000/bmi?after=2011-12-08&before=2015-11-11", mediaType, PrettyStrings.OK_OK, response);
+
+}
+
+private static void test3_12(String mediaType){
+
+	System.out.println(String.format(PrettyStrings.HEADER, "E12"));
+
+	System.out.println("\n\n NOW WE ARE GOING TO FILTER PEOPLE BY THE VALUE (MIN MAX) OF A GIVEN MEASURE \n\n EXTRA POINTS 12\n");
+	System.out.println("\n\n FIRST WE PRINT ALL HISTORY OF BMI MEASUREMENTS:\n");
+
+	Response r = testMe("/person", PrettyStrings.GET_STRING, mediaType, null);
+	StringHelper.prettyResultPrinter(11, PrettyStrings.GET_STRING, "/person/10000/bmi", mediaType, PrettyStrings.OK_OK, r);
+
+	System.out.println("\n\n THEN WE PRINT FILTERED RESULTS BY VALUES (SEE URL):\n");
+
+	ClientConfig clientConfig1 = new ClientConfig();
+	Client client = ClientBuilder.newClient(clientConfig1);
+	URI uri = UriBuilder.fromUri(PrettyStrings.URI_SERVER).build();
+	service = client.target(uri);
+	Response response = service.path("/person")
+			.queryParam("measureType", "bmi")
+			.queryParam("min", "72").queryParam("max", "74")
+			.request(mediaType).get(Response.class);
+
+	StringHelper.prettyResultPrinter(11, PrettyStrings.GET_STRING, "/person/10000/bmi?after=2011-12-08&before=2015-11-11", mediaType, PrettyStrings.OK_OK, response);
+
+}
 
  private static void pressAnyKeyToContinue(){
    System.out.println("\n \n  Press any key to continue... \n \n");
@@ -325,6 +471,73 @@ private static void test3_7(String mediaType){
 
 	response.bufferEntity();
 	return response;
+	}
+
+	private static void test3_9(String mediaType) throws JAXBException, JsonProcessingException {
+		System.out.println(String.format(PrettyStrings.HEADER, "3.9"));
+		String status;
+		MeasureGetList mgl = new MeasureGetList();
+		MeasureGet mg1 = new MeasureGet(null, "height", "172", null);	//Calendar.getInstance().getTime());
+		MeasureGet mg2 = new MeasureGet(null, "weight", "72", null);		//Calendar.getInstance().getTime());
+
+		Response r = testMe("/person/" + ClientApp.firstPerson.getIdPerson()+"/" + ClientApp.measure_Type, PrettyStrings.GET_STRING, mediaType, null);
+		MeasureGetList m;
+		if(mediaType.equals(PrettyStrings.APP_XML)){
+		m = r.readEntity(MeasureGetList.class);
+	} else{
+		List<MeasureGet> measure = r.readEntity(new GenericType<List<MeasureGet>>(){});
+		m = new MeasureGetList(measure);
+	}
+		int oldCount = m.getMeasureList().size();
+		status = (r.getStatus() == 200 || r.getStatus() == 201 || r.getStatus() == 202)? PrettyStrings.OK_OK : PrettyStrings.ERROR_E;
+		System.out.println("Request #6: GET /person/" + ClientApp.myPerson.getIdPerson()+"/" + ClientApp.measure_Type + "/"
+			+ " Accept: " + mediaType
+			+ "\n\t=> Result: " + status +"\n"
+			+ "\t=> HTTP Status: 200\n" + "\n\nTHE NUMBER OF MEASUREMENTS IS: " + oldCount);
+			System.out.println("\n\nNOW I AM GOING TO MAKE THE POST REQUEST\n\n");
+			MeasurePost mp = new MeasurePost("height","72");
+			java.io.StringWriter sw = new StringWriter();
+			JAXBContext jaxbContext1 = JAXBContext.newInstance(MeasurePost.class);
+			Marshaller jaxbMarshaller1 = jaxbContext1.createMarshaller();
+			jaxbMarshaller1.marshal(mp, sw);
+
+			ObjectMapper mapper = new ObjectMapper();
+			String jsonInString = mapper.writeValueAsString(mp);
+
+			String body;
+			if(mediaType.equals(MediaType.APPLICATION_XML)){
+				 body = sw.toString();
+			} else {
+				 body =	jsonInString;
+			}
+			Response postR = testMe("/person/" + ClientApp.firstPerson.getIdPerson()+"/" + ClientApp.measure_Type, PrettyStrings.POST_STRING, mediaType, body);
+			status = (postR.getStatus() == 200 || postR.getStatus() == 201 || postR.getStatus() == 202)? PrettyStrings.OK_OK : PrettyStrings.ERROR_E;
+			StringHelper.prettyResultPrinter(9, PrettyStrings.POST_STRING, "/person/" + ClientApp.firstPerson.getIdPerson()+"/" + ClientApp.measure_Type, mediaType, status, postR);
+			System.out.println("\n\nNOW I AM GOING TO MAKE AGAIN THE GET REQUEST\n");
+			r = testMe("/person/" + ClientApp.firstPerson.getIdPerson()+"/" + ClientApp.measure_Type, PrettyStrings.GET_STRING, mediaType, null);
+			if(mediaType.equals(PrettyStrings.APP_XML)){
+			m = r.readEntity(MeasureGetList.class);
+		} else{
+			List<MeasureGet> measure = r.readEntity(new GenericType<List<MeasureGet>>(){});
+			m = new MeasureGetList(measure);
+		}
+
+			status = (r.getStatus() == 200 || r.getStatus() == 201 || r.getStatus() == 202)? PrettyStrings.OK_OK : PrettyStrings.ERROR_E;
+			System.out.println("Request #6: GET /person/" + ClientApp.myPerson.getIdPerson()+"/" + ClientApp.measure_Type + "/"
+				+" Accept: " + mediaType
+				+"\n\t=> Result: " + status +"\n"
+				+"\t=> HTTP Status: 200\n");
+
+
+			if(mediaType.equals(PrettyStrings.APP_XML)){
+				m = r.readEntity(MeasureGetList.class);
+			} else{
+				List<MeasureGet> measure = r.readEntity(new GenericType<List<MeasureGet>>(){});
+				m = new MeasureGetList(measure);
+			}
+			int newCount = m.getMeasureList().size();
+			System.out.println("\n\nTHE NEW NUMBER OF MEASUREMENTS IS: "+ newCount +"\n\n");
+			status = (oldCount<newCount)? PrettyStrings.OK_OK : PrettyStrings.ERROR_E;
 	}
 
 }
