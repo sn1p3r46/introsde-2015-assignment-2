@@ -162,6 +162,7 @@ public Person newPerson(Person person) throws IOException {
         return Person.savePerson(person);
     }else{
         //removes the life statuses in the persons and puts them in another variable
+        //System.out.println()
         ArrayList<LifeStatus> list_lifeStatus = new ArrayList<>();
         list_lifeStatus.addAll(person.getLifeStatus());
         person.setLifeStatus(null);

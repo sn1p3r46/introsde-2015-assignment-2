@@ -23,6 +23,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlValue;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
@@ -60,7 +61,8 @@ public class MeasureDefinition implements Serializable {
 	public MeasureDefinition() {
 	}
 	public MeasureDefinition(String s){
-		MeasureDefinition.getMeasureDefinitionByName(s);
+		//MeasureDefinition.getMeasureDefinitionByName(s);
+		this.measureName=s;
 	}
 
 	@XmlTransient
@@ -81,7 +83,7 @@ public class MeasureDefinition implements Serializable {
 	public void setMeasureName(String measureName) {
 		this.measureName = measureName;
 	}
-	
+
 	@XmlTransient
 	public String getMeasureType() {
 		return this.measureType;
@@ -105,6 +107,19 @@ public class MeasureDefinition implements Serializable {
 		MeasureDefinition p = em.find(MeasureDefinition.class, personId);
 		LifeCoachDao.instance.closeConnections(em);
 		return p;
+	}
+
+	public static MeasureDefinition getMeasureDefinitionByName(String measureName) {
+		EntityManager em = LifeCoachDao.instance.createEntityManager();
+		try{
+		MeasureDefinition p = em.createNamedQuery("MeasureDefinition.getMeasureDefinitionByName", MeasureDefinition.class).setParameter(1, measureName).getSingleResult();
+		LifeCoachDao.instance.closeConnections(em);
+		if(p==null){ System.out.println("Sono nullo MDEF.JAVA 151"); }
+		return p;
+		}
+		catch(Exception e){
+						return null;
+				 }
 	}
 
 	public static List<MeasureDefinition> getAll() {
@@ -144,16 +159,5 @@ public class MeasureDefinition implements Serializable {
 	    LifeCoachDao.instance.closeConnections(em);
 	}
 
-	public static MeasureDefinition getMeasureDefinitionByName(String measureName) {
-		EntityManager em = LifeCoachDao.instance.createEntityManager();
-		try{
-		MeasureDefinition p = em.createNamedQuery("MeasureDefinition.getMeasureDefinitionByName", MeasureDefinition.class).setParameter(1, measureName).getSingleResult();
-		LifeCoachDao.instance.closeConnections(em);
-		if(p==null){ System.out.println("Sono nullo MDEF.JAVA 151"); }
-		return p;
-		}
-		catch(Exception e){
-            return null;
-         }
-	}
+
 }
