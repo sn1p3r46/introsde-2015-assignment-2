@@ -140,6 +140,8 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 			pressAnyKeyToContinue();
 			test3_4(PrettyStrings.APP_JSON);
 			pressAnyKeyToContinue();
+			test3_5(PrettyStrings.APP_JSON);
+			pressAnyKeyToContinue();
 			test3_6(PrettyStrings.APP_JSON);
 			pressAnyKeyToContinue();
 			test3_7(PrettyStrings.APP_JSON);
