@@ -103,109 +103,63 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 		Client client = ClientBuilder.newClient(clientConfig);
 		service = client.target(PrettyStrings.URI_SERVER);
 
-		/*JAXBContext jaxbContext = JAXBContext.newInstance(PersonList.class);
-    Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-*/
-// /*
+		if(args[0].equals("xml")){
+
+			pressAnyKeyToContinue();
+			test3_1(PrettyStrings.APP_XML);
+			pressAnyKeyToContinue();
+			test3_2(PrettyStrings.APP_XML);
+			pressAnyKeyToContinue();
+			test3_3(PrettyStrings.APP_XML);
+			pressAnyKeyToContinue();
+			test3_4(PrettyStrings.APP_XML);
+			pressAnyKeyToContinue();
+			test3_5(PrettyStrings.APP_XML);
+			pressAnyKeyToContinue();
+			test3_6(PrettyStrings.APP_XML);
+			pressAnyKeyToContinue();
+			test3_7(PrettyStrings.APP_XML);
+			pressAnyKeyToContinue();
+			test3_8(PrettyStrings.APP_XML);
+			pressAnyKeyToContinue();
+			test3_9(PrettyStrings.APP_XML);
+			pressAnyKeyToContinue();
+			test3_10(PrettyStrings.APP_XML);
+			pressAnyKeyToContinue();
+			test3_11(PrettyStrings.APP_XML);
+			pressAnyKeyToContinue();
+			test3_12(PrettyStrings.APP_XML);
+
+		}else{
+
+			pressAnyKeyToContinue();
+			test3_1(PrettyStrings.APP_JSON);
+			pressAnyKeyToContinue();
+			test3_2(PrettyStrings.APP_JSON);
+			pressAnyKeyToContinue();
+			test3_3(PrettyStrings.APP_JSON);
+			pressAnyKeyToContinue();
+			test3_4(PrettyStrings.APP_JSON);
+			pressAnyKeyToContinue();
+			test3_6(PrettyStrings.APP_JSON);
+			pressAnyKeyToContinue();
+			test3_7(PrettyStrings.APP_JSON);
+			pressAnyKeyToContinue();
+			test3_8(PrettyStrings.APP_JSON);
+			pressAnyKeyToContinue();
+			test3_9(PrettyStrings.APP_JSON);
+			pressAnyKeyToContinue();
+			test3_10(PrettyStrings.APP_JSON);
+			pressAnyKeyToContinue();
+			test3_11(PrettyStrings.APP_JSON);
+			pressAnyKeyToContinue();
+			test3_12(PrettyStrings.APP_JSON);
+			
+		}
 
 
-		//MeasureTypes ms = new MeasureTypes();
-		//ms.createMeasureType();
-		//ms.addMeasure("ciaone");
-		//ms.addMeasure("cidcdddddaone");
-/*
-		MeasureGetList mgl = new MeasureGetList();
-		MeasureGet mg1 = new MeasureGet("121", "height", "172", null);	//Calendar.getInstance().getTime());
-		MeasureGet mg2 = new MeasureGet("122", "weight", "72", null);		//Calendar.getInstance().getTime());
-		mg1.setIdMeasureHistory(null);
-		mg2.setIdMeasureHistory(null);
-
-		mgl.addMeasure(mg1);
-		mgl.addMeasure(mg2);
-
-	  try {
-
-		File file = new File("file.xml");
-		JAXBContext jaxbContext = JAXBContext.newInstance(MeasureGetList.class);
-		Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
-
-		// output pretty printed
-		jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-
-		jaxbMarshaller.marshal(mgl, file);
-		jaxbMarshaller.marshal(mgl, System.out);
-
-		Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-		MeasureGetList mgll = (MeasureGetList) jaxbUnmarshaller.unmarshal(file);
-		System.out.println(mgll.getMeasureList().get(0).getIdMeasureHistory());
-
-		JAXBContext jaxbContext1 = JAXBContext.newInstance(MeasurePost.class);
-		Marshaller jaxbMarshaller1 = jaxbContext1.createMarshaller();
-
-		jaxbMarshaller1.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-
-		MeasurePost mp = new MeasurePost("Nome","Valore");
-		System.out.println(mp.getMeasure());
-		System.out.println(mp.getValue());
-
-		jaxbMarshaller1.marshal(mp, file);
-		jaxbMarshaller1.marshal(mp, System.out);
-
-
-
-	      } catch (JAXBException e) {
-		e.printStackTrace();
-	      }
-
-		//return;
-*/
-
-		pressAnyKeyToContinue();
-		test3_1(PrettyStrings.APP_XML);
-		pressAnyKeyToContinue();
-		test3_1(PrettyStrings.APP_JSON);
-		pressAnyKeyToContinue();
-		test3_2(PrettyStrings.APP_XML);
-		pressAnyKeyToContinue();
-		test3_2(PrettyStrings.APP_JSON);
-		pressAnyKeyToContinue();
-		test3_3(PrettyStrings.APP_XML);
-		pressAnyKeyToContinue();
-		test3_3(PrettyStrings.APP_JSON);
-		pressAnyKeyToContinue();
-		test3_4(PrettyStrings.APP_XML);
-		pressAnyKeyToContinue();
-		test3_4(PrettyStrings.APP_JSON);
-		pressAnyKeyToContinue();
-		test3_5(PrettyStrings.APP_XML);
-		pressAnyKeyToContinue();
-		test3_6(PrettyStrings.APP_JSON);
-		pressAnyKeyToContinue();
-		test3_6(PrettyStrings.APP_XML);
-		pressAnyKeyToContinue();
-		test3_7(PrettyStrings.APP_XML);
-		pressAnyKeyToContinue();
-		test3_7(PrettyStrings.APP_JSON);
-		pressAnyKeyToContinue();
-		test3_8(PrettyStrings.APP_XML);
-		pressAnyKeyToContinue();
-		test3_8(PrettyStrings.APP_JSON);
-		pressAnyKeyToContinue();
-		test3_9(PrettyStrings.APP_XML);
-		pressAnyKeyToContinue();
-		test3_9(PrettyStrings.APP_JSON);
-		test3_10(PrettyStrings.APP_XML);
-		pressAnyKeyToContinue();
-		test3_10(PrettyStrings.APP_JSON);
-		pressAnyKeyToContinue();
-		test3_11(PrettyStrings.APP_XML);
-		pressAnyKeyToContinue();
-		test3_11(PrettyStrings.APP_JSON);
-		pressAnyKeyToContinue();
-		test3_12(PrettyStrings.APP_XML);
-		pressAnyKeyToContinue();
-		test3_12(PrettyStrings.APP_JSON);
-		pressAnyKeyToContinue();
+		System.out.println("Client Test Completed!");
+		pressAnyKeyToExit();
 	}
 
 	private static void test3_1(String mediaType){
@@ -381,8 +335,14 @@ private static void test3_10(String mediaType){
 	cal.set(Calendar.MONTH, Calendar.JANUARY);
 	cal.set(Calendar.DAY_OF_MONTH, 1);
 
-	MeasurePut mp = new MeasurePut(StringHelper.randIntString(1,1000),cal.getTime());
 
+	Object mp;
+	if(mediaType.equals(PrettyStrings.APP_JSON)){
+	mp = "{\"value\":\""+ StringHelper.randIntString(1,1000)+"\"}";
+	//System.out.println(mp.toString());
+} else{
+	mp = new MeasurePut(StringHelper.randIntString(1,1000),cal.getTime());
+}
 
 	r = testMe("/person/" + ClientApp.myPerson.getIdPerson()+"/" + ClientApp.measure_Type + "/" + ClientApp.measure_id, PrettyStrings.PUT_STRING, mediaType, mp);
 
@@ -453,6 +413,12 @@ private static void test3_12(String mediaType){
    try{System.in.read();}
    catch(Exception e){}
 	}
+
+	private static void pressAnyKeyToExit(){
+    System.out.println("\n \n  Press any key to exit... \n \n");
+    try{System.in.read();}
+    catch(Exception e){}
+ 	}
 
 	private static Response testMe(String URIPath,  String method, String mediaType, Object requestBody){
 	Response response = null;

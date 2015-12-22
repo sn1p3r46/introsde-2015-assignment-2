@@ -15,7 +15,7 @@
        # The target "download-ivy" and "install-ivy" will download the ivy jar and place it in the "ivy" folder
        #
 -->
-    <project name="sdelab06" default="install" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
+    <project name="IntroSDE-Assignment-2" default="install" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
         <!-- PART 1: Ivy properties, download, installation and configuration -->
         <property name="ivy.install.version" value="2.4.0-rc1" />
         <property name="ivy.jar.dir" value="${basedir}/ivy" />
@@ -135,18 +135,37 @@
                 </classpath>
             </java>
         </target>
-        <target name="prova">
-            <echo message="app start introsde.rest.client.ClientApp in ${build.dir}" />
-            <java classname="introsde.rest.client.ClientApp" classpath="${build.dir}" fork="true">
-                <arg value="$JAVA_OPTS  -cp" />
-                <classpath>
-                    <path location="build" />
-                    <fileset dir="WebContent/WEB-INF/lib">
-                        <include name="**/*.jar" />
-                        <include name="*.jar" />
-                    </fileset>
-                </classpath>
-            </java>
+        <target name="client.testJSON">
+            <record name="client-json.log" action="start" append="no"/>
+                <echo message="app start introsde.rest.client.ClientApp in ${build.dir}" />
+                <java classname="introsde.rest.client.ClientApp" classpath="${build.dir}" fork="true">
+                    <arg value="json"/>
+                    <arg value="$JAVA_OPTS  -cp" />
+                    <classpath>
+                        <path location="build" />
+                        <fileset dir="WebContent/WEB-INF/lib">
+                            <include name="**/*.jar" />
+                            <include name="*.jar" />
+                        </fileset>
+                    </classpath>
+                </java>
+            <record name="client-json.log" action="stop"/>
+        </target>
+        <target name="client.testXML">
+            <record name="client-xml.log" action="start" append="no"/>
+                <echo message="app start introsde.rest.client.ClientApp in ${build.dir}" />
+                <java classname="introsde.rest.client.ClientApp" classpath="${build.dir}" fork="true">
+                    <arg value="xml"/>
+                    <arg value="$JAVA_OPTS  -cp" />
+                    <classpath>
+                        <path location="build" />
+                        <fileset dir="WebContent/WEB-INF/lib">
+                            <include name="**/*.jar" />
+                            <include name="*.jar" />
+                        </fileset>
+                    </classpath>
+                </java>
+            <record name="client-xml.log" action="stop"/>
         </target>
         <!-- Run the JUnit Tests -->
         <!-- Output is XML, could also be plain-->

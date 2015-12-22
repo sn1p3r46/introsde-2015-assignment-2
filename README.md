@@ -1,5 +1,5 @@
 
-# Introsde 2015 Assignment 3 (client part)
+# Introsde 2015 Assignment 2 (Client and Server)
 
 **Student:** Andrea Galloni ([Twitter](https://twitter.com/andreagalloni92))
 

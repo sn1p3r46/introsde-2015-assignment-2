@@ -1,0 +1,1877 @@
+     [echo] app start introsde.rest.client.ClientApp in build
+     [java] 
+     [java]   ASSIGNMENT 2
+     [java]   STUDENT Andrea Galloni
+     [java]   E-MAIL: andrea[dot]galloni[at]studenti[dot]unitn[dot]it
+     [java] 
+     [java]   Client Started.. 
+     [java]   Server URI: http://127.0.1.1:5700/sdelab
+     [java] 
+     [java]  
+     [java]   Press any key to continue... 
+     [java]  
+     [java] 
+     [java] 
+     [java]  
+     [java]   Press any key to continue... 
+     [java]  
+     [java] 
+     [java] 
+     [java] 			##############
+     [java] 			## TEST 3.1 ##
+     [java] 			##############
+     [java] 
+     [java] Request #1: GET /person Accept: application/json
+     [java] 	=> Result: OK
+     [java] 	=> HTTP Status: 200
+     [java] 
+     [java] [
+     [java]      {
+     [java]           "firstname": "NAAAAAAASH",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "72"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "72"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "bmi",
+     [java]                     "value": "72"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 1,
+     [java]           "birthdate": "1992-10-20",
+     [java]           "lastname": "VERDI"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6554,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "NAAAAAAASH",
+     [java]           "healthprofile": [],
+     [java]           "idPerson": 6604,
+     [java]           "birthdate": "1992-10-26",
+     [java]           "lastname": "VERDI"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "NAAAAAAASH",
+     [java]           "healthprofile": [],
+     [java]           "idPerson": 6605,
+     [java]           "birthdate": "1992-10-26",
+     [java]           "lastname": "VERDI"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "NAAAAAAASH",
+     [java]           "healthprofile": [],
+     [java]           "idPerson": 6654,
+     [java]           "birthdate": "1992-10-26",
+     [java]           "lastname": "VERDI"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "NAAAAAAASH",
+     [java]           "healthprofile": [],
+     [java]           "idPerson": 6704,
+     [java]           "birthdate": "1992-10-26",
+     [java]           "lastname": "VERDI"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "NAAAAAAASH",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "72"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "72"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "bmi",
+     [java]                     "value": "72"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6754,
+     [java]           "birthdate": "1992-10-26",
+     [java]           "lastname": "VERDI"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "NAAAAAAASH",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "72"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "72"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "bmi",
+     [java]                     "value": "72"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6755,
+     [java]           "birthdate": "1992-10-26",
+     [java]           "lastname": "VERDI"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "DIOCANE",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "765"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "722"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "bmi",
+     [java]                     "value": "45"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6756,
+     [java]           "birthdate": "1992-10-26",
+     [java]           "lastname": "DIOCANE"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6757,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "CIAO",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "180"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "87"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6804,
+     [java]           "birthdate": "1978-09-01",
+     [java]           "lastname": "CASSETTO"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "CIAO",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "180"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "87"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6805,
+     [java]           "birthdate": "1978-09-01",
+     [java]           "lastname": "CASSETTO"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "CIAO",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "180"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "87"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6854,
+     [java]           "birthdate": "1978-09-01",
+     [java]           "lastname": "CASSETTO"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "CIAO",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "180"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "87"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6855,
+     [java]           "birthdate": "1978-09-01",
+     [java]           "lastname": "CASSETTO"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "CIAO",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "180"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "87"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6856,
+     [java]           "birthdate": "1978-09-01",
+     [java]           "lastname": "CASSETTO"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "CIAO",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "180"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "87"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6857,
+     [java]           "birthdate": "1978-09-01",
+     [java]           "lastname": "CASSETTO"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "DIOCANE",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "765"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "722"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "bmi",
+     [java]                     "value": "45"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6858,
+     [java]           "birthdate": "1992-10-26",
+     [java]           "lastname": "DIOCANE"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6859,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6904,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6906,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6908,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6910,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6912,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6914,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6916,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6918,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6920,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6922,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6924,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6926,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6928,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6930,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6932,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6954,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6956,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6958,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 7004,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 7006,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 7008,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 7010,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 7012,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 7014,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 7016,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 7018,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "SALLY",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "72"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "124"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "bmi",
+     [java]                     "value": "79"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 10000,
+     [java]           "birthdate": "1993-12-26",
+     [java]           "lastname": "DELLI POGGI"
+     [java]      }
+     [java] ]
+     [java] 
+     [java] 
+     [java]  
+     [java]   Press any key to continue... 
+     [java]  
+     [java] 
+     [java] 
+     [java] 			##############
+     [java] 			## TEST 3.2 ##
+     [java] 			##############
+     [java] 
+     [java] Request #2: GET /person/1 Accept: application/json
+     [java] 	=> Result: OK
+     [java] 	=> HTTP Status: 200
+     [java] 
+     [java] {
+     [java]      "firstname": "NAAAAAAASH",
+     [java]      "healthprofile": [
+     [java]           {
+     [java]                "measure": "weight",
+     [java]                "value": "72"
+     [java]           },
+     [java]           {
+     [java]                "measure": "height",
+     [java]                "value": "72"
+     [java]           },
+     [java]           {
+     [java]                "measure": "bmi",
+     [java]                "value": "72"
+     [java]           }
+     [java]      ],
+     [java]      "idPerson": 1,
+     [java]      "birthdate": "1992-10-20",
+     [java]      "lastname": "VERDI"
+     [java] }
+     [java] 
+     [java] 
+     [java]  
+     [java]   Press any key to continue... 
+     [java]  
+     [java] 
+     [java] 
+     [java] 			##############
+     [java] 			## TEST 3.3 ##
+     [java] 			##############
+     [java] 
+     [java] Request #3: PUT /person/1 Accept: application/json Content-type: application/json
+     [java] 	=> Result: OK
+     [java] 	=> HTTP Status: 200
+     [java] 
+     [java] {
+     [java]      "firstname": "Jooooooooohn",
+     [java]      "healthprofile": [
+     [java]           {
+     [java]                "measure": "weight",
+     [java]                "value": "72"
+     [java]           },
+     [java]           {
+     [java]                "measure": "height",
+     [java]                "value": "72"
+     [java]           },
+     [java]           {
+     [java]                "measure": "bmi",
+     [java]                "value": "72"
+     [java]           }
+     [java]      ],
+     [java]      "idPerson": 1,
+     [java]      "birthdate": "1992-10-19",
+     [java]      "lastname": "VERDI"
+     [java] }
+     [java] 
+     [java] 
+     [java]  
+     [java]   Press any key to continue... 
+     [java]  
+     [java] 
+     [java] 
+     [java] 			##############
+     [java] 			## TEST 3.4 ##
+     [java] 			##############
+     [java] 
+     [java] Request #4: POST /person Accept: application/xml Content-type: application/json
+     [java] 	=> Result: OK
+     [java] 	=> HTTP Status: 200
+     [java] 
+     [java] {
+     [java]      "firstname": "Chuck",
+     [java]      "healthprofile": [
+     [java]           {
+     [java]                "measure": "weight",
+     [java]                "value": "78.9"
+     [java]           },
+     [java]           {
+     [java]                "measure": "height",
+     [java]                "value": "172"
+     [java]           }
+     [java]      ],
+     [java]      "idPerson": 7019,
+     [java]      "birthdate": "1944-12-31",
+     [java]      "lastname": "Norris"
+     [java] }
+     [java] 
+     [java] 
+     [java]  
+     [java]   Press any key to continue... 
+     [java]  
+     [java] 
+     [java] 
+     [java] 			##############
+     [java] 			## TEST 3.6 ##
+     [java] 			##############
+     [java] 
+     [java] Request #9: GET /measureTypes Accept: application/json
+     [java] 	=> Result: OK
+     [java] 	=> HTTP Status: 200
+     [java] 
+     [java] {"measureType": [
+     [java]      "weight",
+     [java]      "height",
+     [java]      "bmi"
+     [java] ]}
+     [java] 
+     [java] 
+     [java]  
+     [java]   Press any key to continue... 
+     [java]  
+     [java] 
+     [java] 
+     [java] 			##############
+     [java] 			## TEST 3.7 ##
+     [java] 			##############
+     [java] 
+     [java] Request #9: GET /person/10000/bmi Accept: application/json
+     [java] 	=> Result: OK
+     [java] 	=> HTTP Status: 200
+     [java] 
+     [java] [
+     [java]      {
+     [java]           "idMeasureHistory": 10002,
+     [java]           "value": "234",
+     [java]           "timestamp": "2014-11-23"
+     [java]      },
+     [java]      {
+     [java]           "idMeasureHistory": 10003,
+     [java]           "value": "80",
+     [java]           "timestamp": "2015-11-24"
+     [java]      }
+     [java] ]
+     [java] 
+     [java] 
+     [java]  
+     [java]   Press any key to continue... 
+     [java]  
+     [java] 
+     [java] 
+     [java] 			##############
+     [java] 			## TEST 3.8 ##
+     [java] 			##############
+     [java] 
+     [java] Request #7: GET /person/10000/bmi/10002 Accept: application/json
+     [java] 	=> Result: OK
+     [java] 	=> HTTP Status: 200
+     [java] 
+     [java] {
+     [java]      "idMeasureHistory": 10002,
+     [java]      "value": "234",
+     [java]      "timestamp": "2014-11-23"
+     [java] }
+     [java] 
+     [java] 
+     [java]  
+     [java]   Press any key to continue... 
+     [java]  
+     [java] 
+     [java] 
+     [java] 			##############
+     [java] 			## TEST 3.9 ##
+     [java] 			##############
+     [java] 
+     [java] Request #6: GET /person/1/bmi/ Accept: application/json
+     [java] 	=> Result: OK
+     [java] 	=> HTTP Status: 200
+     [java] 
+     [java] 
+     [java] THE NUMBER OF MEASUREMENTS IS: 46
+     [java] 
+     [java] 
+     [java] NOW I AM GOING TO MAKE THE POST REQUEST
+     [java] 
+     [java] 
+     [java] {
+     [java]  "value": "72",
+     [java]  "timestamp": "2013-01-01"
+     [java] }
+     [java] Request #9: POST /person/1/bmi Accept: application/json Content-type: application/json
+     [java] 	=> Result: OK
+     [java] 	=> HTTP Status: 200
+     [java] 
+     [java] {
+     [java]      "measure": "bmi",
+     [java]      "value": "72"
+     [java] }
+     [java] 
+     [java] 
+     [java] 
+     [java] NOW I AM GOING TO MAKE AGAIN THE GET REQUEST
+     [java] 
+     [java] Request #6: GET /person/10000/bmi/ Accept: application/json
+     [java] 	=> Result: OK
+     [java] 	=> HTTP Status: 200
+     [java] 
+     [java] 
+     [java] 
+     [java] THE NEW NUMBER OF MEASUREMENTS IS: 47
+     [java] 
+     [java] 
+     [java] 
+     [java]  
+     [java]   Press any key to continue... 
+     [java]  
+     [java] 
+     [java] 
+     [java] 			##############
+     [java] 			## TEST E10 ##
+     [java] 			##############
+     [java] 
+     [java] 
+     [java] 
+     [java]  NOW WE ARE GOING TO UPDATE SOME VALUES
+     [java] 
+     [java]  EXTRA POINTS 10
+     [java] 
+     [java] Request #7: GET /person/10000/bmi/10002 Accept: application/json
+     [java] 	=> Result: OK
+     [java] 	=> HTTP Status: 200
+     [java] 
+     [java] {
+     [java]      "idMeasureHistory": 10002,
+     [java]      "value": "234",
+     [java]      "timestamp": "2014-11-23"
+     [java] }
+     [java] 
+     [java] 
+     [java] 
+     [java]  NOW WE ARE GOING TO SEND THE PUT REQUEST 
+     [java] 
+     [java] 
+     [java] Request #10: PUT /person/1 Accept: application/json Content-type: application/json
+     [java] 	=> Result: OK
+     [java] 	=> HTTP Status: 200
+     [java] 
+     [java] {
+     [java]      "idMeasureHistory": 10002,
+     [java]      "value": "945",
+     [java]      "timestamp": "2014-11-23"
+     [java] }
+     [java] 
+     [java] 
+     [java] 
+     [java] THE MEASURE VALUE IS CHANGED FROM 234 TO 945
+     [java] 
+     [java] 
+     [java]  
+     [java]   Press any key to continue... 
+     [java]  
+     [java] 
+     [java] 
+     [java] 			##############
+     [java] 			## TEST E11 ##
+     [java] 			##############
+     [java] 
+     [java] 
+     [java] 
+     [java]  NOW WE ARE GOING TO FILTER BY DATE A VALUE: BMI 
+     [java] 
+     [java]  EXTRA POINTS 11
+     [java] 
+     [java] 
+     [java] 
+     [java]  FIRST WE PRINT ALL HISTORY OF BMI MEASUREMENTS:
+     [java] 
+     [java] Request #11: GET /person/10000/bmi Accept: application/json
+     [java] 	=> Result: OK
+     [java] 	=> HTTP Status: 200
+     [java] 
+     [java] [
+     [java]      {
+     [java]           "idMeasureHistory": 10002,
+     [java]           "value": "945",
+     [java]           "timestamp": "2014-11-23"
+     [java]      },
+     [java]      {
+     [java]           "idMeasureHistory": 10003,
+     [java]           "value": "80",
+     [java]           "timestamp": "2015-11-24"
+     [java]      }
+     [java] ]
+     [java] 
+     [java] 
+     [java] 
+     [java]  THEN WE PRINT FILTERED RESULTS BY DATE (SEE URL):
+     [java] 
+     [java] Request #11: GET /person/10000/bmi?after=2011-12-08&before=2015-11-11 Accept: application/json
+     [java] 	=> Result: OK
+     [java] 	=> HTTP Status: 200
+     [java] 
+     [java] [{
+     [java]      "idMeasureHistory": 10002,
+     [java]      "value": "945",
+     [java]      "timestamp": "2014-11-23"
+     [java] }]
+     [java] 
+     [java] 
+     [java]  
+     [java]   Press any key to continue... 
+     [java]  
+     [java] 
+     [java] 
+     [java] 			##############
+     [java] 			## TEST E12 ##
+     [java] 			##############
+     [java] 
+     [java] 
+     [java] 
+     [java]  NOW WE ARE GOING TO FILTER PEOPLE BY THE VALUE (MIN MAX) OF A GIVEN MEASURE 
+     [java] 
+     [java]  EXTRA POINTS 12
+     [java] 
+     [java] 
+     [java] 
+     [java]  FIRST WE PRINT ALL HISTORY OF BMI MEASUREMENTS:
+     [java] 
+     [java] Request #11: GET /person/10000/bmi Accept: application/json
+     [java] 	=> Result: OK
+     [java] 	=> HTTP Status: 200
+     [java] 
+     [java] [
+     [java]      {
+     [java]           "firstname": "Jooooooooohn",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "72"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "72"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "bmi",
+     [java]                     "value": "72"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 1,
+     [java]           "birthdate": "1992-10-19",
+     [java]           "lastname": "VERDI"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6554,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "NAAAAAAASH",
+     [java]           "healthprofile": [],
+     [java]           "idPerson": 6604,
+     [java]           "birthdate": "1992-10-26",
+     [java]           "lastname": "VERDI"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "NAAAAAAASH",
+     [java]           "healthprofile": [],
+     [java]           "idPerson": 6605,
+     [java]           "birthdate": "1992-10-26",
+     [java]           "lastname": "VERDI"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "NAAAAAAASH",
+     [java]           "healthprofile": [],
+     [java]           "idPerson": 6654,
+     [java]           "birthdate": "1992-10-26",
+     [java]           "lastname": "VERDI"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "NAAAAAAASH",
+     [java]           "healthprofile": [],
+     [java]           "idPerson": 6704,
+     [java]           "birthdate": "1992-10-26",
+     [java]           "lastname": "VERDI"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "NAAAAAAASH",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "72"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "72"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "bmi",
+     [java]                     "value": "72"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6754,
+     [java]           "birthdate": "1992-10-26",
+     [java]           "lastname": "VERDI"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "NAAAAAAASH",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "72"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "72"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "bmi",
+     [java]                     "value": "72"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6755,
+     [java]           "birthdate": "1992-10-26",
+     [java]           "lastname": "VERDI"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "DIOCANE",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "765"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "722"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "bmi",
+     [java]                     "value": "45"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6756,
+     [java]           "birthdate": "1992-10-26",
+     [java]           "lastname": "DIOCANE"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6757,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "CIAO",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "180"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "87"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6804,
+     [java]           "birthdate": "1978-09-01",
+     [java]           "lastname": "CASSETTO"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "CIAO",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "180"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "87"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6805,
+     [java]           "birthdate": "1978-09-01",
+     [java]           "lastname": "CASSETTO"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "CIAO",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "180"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "87"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6854,
+     [java]           "birthdate": "1978-09-01",
+     [java]           "lastname": "CASSETTO"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "CIAO",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "180"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "87"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6855,
+     [java]           "birthdate": "1978-09-01",
+     [java]           "lastname": "CASSETTO"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "CIAO",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "180"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "87"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6856,
+     [java]           "birthdate": "1978-09-01",
+     [java]           "lastname": "CASSETTO"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "CIAO",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "180"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "87"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6857,
+     [java]           "birthdate": "1978-09-01",
+     [java]           "lastname": "CASSETTO"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "DIOCANE",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "765"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "722"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "bmi",
+     [java]                     "value": "45"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6858,
+     [java]           "birthdate": "1992-10-26",
+     [java]           "lastname": "DIOCANE"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6859,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6904,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6906,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6908,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6910,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6912,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6914,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6916,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6918,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6920,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6922,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6924,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6926,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6928,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6930,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6932,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6954,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6956,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6958,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 7004,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 7006,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 7008,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 7010,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 7012,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 7014,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 7016,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 7018,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "Chuck",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "78.9"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "172"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 7019,
+     [java]           "birthdate": "1944-12-31",
+     [java]           "lastname": "Norris"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "SALLY",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "72"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "124"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "bmi",
+     [java]                     "value": "79"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 10000,
+     [java]           "birthdate": "1993-12-26",
+     [java]           "lastname": "DELLI POGGI"
+     [java]      }
+     [java] ]
+     [java] 
+     [java] 
+     [java] 
+     [java]  THEN WE PRINT FILTERED RESULTS BY VALUES (SEE URL):
+     [java] 
+     [java] Request #11: GET /person/10000/bmi?after=2011-12-08&before=2015-11-11 Accept: application/json
+     [java] 	=> Result: OK
+     [java] 	=> HTTP Status: 200
+     [java] 
+     [java] [
+     [java]      {
+     [java]           "firstname": "Jooooooooohn",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "72"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "72"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "bmi",
+     [java]                     "value": "72"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 1,
+     [java]           "birthdate": "1992-10-19",
+     [java]           "lastname": "VERDI"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "NAAAAAAASH",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "72"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "72"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "bmi",
+     [java]                     "value": "72"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6754,
+     [java]           "birthdate": "1992-10-26",
+     [java]           "lastname": "VERDI"
+     [java]      },
+     [java]      {
+     [java]           "firstname": "NAAAAAAASH",
+     [java]           "healthprofile": [
+     [java]                {
+     [java]                     "measure": "weight",
+     [java]                     "value": "72"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "height",
+     [java]                     "value": "72"
+     [java]                },
+     [java]                {
+     [java]                     "measure": "bmi",
+     [java]                     "value": "72"
+     [java]                }
+     [java]           ],
+     [java]           "idPerson": 6755,
+     [java]           "birthdate": "1992-10-26",
+     [java]           "lastname": "VERDI"
+     [java]      }
+     [java] ]
+     [java] 
+     [java] Client Test Completed!
+     [java] 
+     [java]  
+     [java]   Press any key to exit... 
+     [java]  
+     [java] 
