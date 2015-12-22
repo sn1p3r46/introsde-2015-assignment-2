@@ -88,6 +88,8 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 		return this.timestamp;
 	}
 
+	@Temporal(TemporalType.DATE)
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd")
 	public void setTimestamp(Date timestamp) {
 		this.timestamp = timestamp;
 	}
@@ -174,6 +176,7 @@ public static List<HealthMeasureHistory> getMeasureByDate(MeasureDefinition mdef
 	    LifeCoachDao.instance.closeConnections(em);
 	    return list;
 	}
+	
 
 	public static HealthMeasureHistory saveHealthMeasureHistory(HealthMeasureHistory p) {
 		EntityManager em = LifeCoachDao.instance.createEntityManager();
@@ -184,6 +187,7 @@ public static List<HealthMeasureHistory> getMeasureByDate(MeasureDefinition mdef
 	  LifeCoachDao.instance.closeConnections(em);
 	  return p;
 	}
+
 
 	public static HealthMeasureHistory updateHealthMeasureHistory(HealthMeasureHistory p) {
 		EntityManager em = LifeCoachDao.instance.createEntityManager();

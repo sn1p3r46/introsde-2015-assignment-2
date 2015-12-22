@@ -12,8 +12,8 @@ import javax.persistence.TemporalType;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @XmlAccessorType (XmlAccessType.FIELD)
-@XmlRootElement(name="measure")
-public class MeasurePost{
+@XmlRootElement(name="Measure")
+public class MeasurePut{
   //public String measure;
   public String value;
 
@@ -21,26 +21,13 @@ public class MeasurePost{
 	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd")
   public Date timestamp;
 
-  public MeasurePost(){}
+  public MeasurePut(){}
 
-  public MeasurePost(String value, Date timestamp){
+  public MeasurePut(String value, Date timestamp){
     // this.measure = measure;
     this.value = value;
 		this.timestamp = timestamp;
 	}
-
-//  public MeasurePost(String measure,String value, Date timestamp){
-//    this.measure = measure;
-//    this.value = value;
-//		this.timestamp = timestamp;
-//}
-//	public String getMeasure() {
-//		return measure;
-//	}
-//
-//	public void setMeasure(String measure) {
-//		this.measure = measure;
-//	}
 
 	public String getValue() {
 		return value;

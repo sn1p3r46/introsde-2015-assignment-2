@@ -12,7 +12,8 @@
 
 
 <p align="center">
-  <img src="images/soap.png" width="300">
+  <img src="images/rest.png" width="300">
+  <img src="images/api.png" width="250">
 </p>
 
 

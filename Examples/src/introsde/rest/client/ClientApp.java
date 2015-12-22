@@ -18,6 +18,7 @@ import introsde.rest.client.schemas.generated.models.HealthMeasure;
 import introsde.rest.client.schemas.generated.models.MeasureGet;
 import introsde.rest.client.schemas.generated.models.MeasureGetList;
 import introsde.rest.client.schemas.generated.models.MeasurePost;
+import introsde.rest.client.schemas.generated.models.MeasurePut;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -362,7 +363,6 @@ private static void test3_8(String mediaType){
 }
 
 
-
 private static void test3_10(String mediaType){
 	System.out.println(String.format(PrettyStrings.HEADER, "E10"));
 	System.out.println("\n\n NOW WE ARE GOING TO UPDATE SOME VALUES\n\n EXTRA POINTS 10\n");
@@ -374,17 +374,30 @@ private static void test3_10(String mediaType){
 	String old_val = m.getValue();
 
 	StringHelper.prettyResultPrinter(7, PrettyStrings.GET_STRING, "/person/" + ClientApp.myPerson.getIdPerson()+"/" + ClientApp.measure_Type + "/" + ClientApp.measure_id, mediaType, status, r);
-	System.out.println("\n\n NOW WE ARE GOING TO SEND THE POST REQUEST\n\n EXTRA POINTS 10\n");
+	System.out.println("\n\n NOW WE ARE GOING TO SEND THE PUT REQUEST \n\n");
 
-	MeasurePost mp = new MeasurePost(null,StringHelper.randIntString(1,1000));
+	Calendar cal = Calendar.getInstance();
+	cal.set(Calendar.YEAR, 1945);
+	cal.set(Calendar.MONTH, Calendar.JANUARY);
+	cal.set(Calendar.DAY_OF_MONTH, 1);
+
+	MeasurePut mp = new MeasurePut(StringHelper.randIntString(1,1000),cal.getTime());
+
+
 	r = testMe("/person/" + ClientApp.myPerson.getIdPerson()+"/" + ClientApp.measure_Type + "/" + ClientApp.measure_id, PrettyStrings.PUT_STRING, mediaType, mp);
 
+
 	m = r.readEntity(MeasureGet.class);
+
+	if(m==null)
+		System.out.println("\n\n\n BENE R NULLO \n\n\n");
+
 	String new_val = m.getValue();
 	StringHelper.prettyResultPrinter(10, PrettyStrings.PUT_STRING, "/person/"+firstPerson.getIdPerson(), mediaType, status, r);
 
 	System.out.println("\n\nTHE MEASURE VALUE IS CHANGED FROM "+ old_val +" TO "+ new_val + "\n");
 }
+
 
 private static void test3_11(String mediaType){
 
@@ -490,12 +503,18 @@ private static void test3_12(String mediaType){
 	}
 		int oldCount = m.getMeasureList().size();
 		status = (r.getStatus() == 200 || r.getStatus() == 201 || r.getStatus() == 202)? PrettyStrings.OK_OK : PrettyStrings.ERROR_E;
-		System.out.println("Request #6: GET /person/" + ClientApp.myPerson.getIdPerson()+"/" + ClientApp.measure_Type + "/"
+		System.out.println("Request #6: GET /person/" + ClientApp.firstPerson.getIdPerson() + "/" + ClientApp.measure_Type + "/"
 			+ " Accept: " + mediaType
 			+ "\n\t=> Result: " + status +"\n"
 			+ "\t=> HTTP Status: 200\n" + "\n\nTHE NUMBER OF MEASUREMENTS IS: " + oldCount);
 			System.out.println("\n\nNOW I AM GOING TO MAKE THE POST REQUEST\n\n");
-			MeasurePost mp = new MeasurePost("height","72");
+
+			Calendar cal = Calendar.getInstance();
+			cal.set(Calendar.YEAR, 2013);
+			cal.set(Calendar.MONTH, Calendar.JANUARY);
+			cal.set(Calendar.DAY_OF_MONTH, 1);
+
+			MeasurePost mp = new MeasurePost("72",cal.getTime());
 			java.io.StringWriter sw = new StringWriter();
 			JAXBContext jaxbContext1 = JAXBContext.newInstance(MeasurePost.class);
 			Marshaller jaxbMarshaller1 = jaxbContext1.createMarshaller();
@@ -507,8 +526,10 @@ private static void test3_12(String mediaType){
 			String body;
 			if(mediaType.equals(MediaType.APPLICATION_XML)){
 				 body = sw.toString();
+				 System.out.println(XmlHelper.prettyXML(body,1));
 			} else {
 				 body =	jsonInString;
+				 System.out.println(JsonHelper.prettyJSON(body,1));
 			}
 			Response postR = testMe("/person/" + ClientApp.firstPerson.getIdPerson()+"/" + ClientApp.measure_Type, PrettyStrings.POST_STRING, mediaType, body);
 			status = (postR.getStatus() == 200 || postR.getStatus() == 201 || postR.getStatus() == 202)? PrettyStrings.OK_OK : PrettyStrings.ERROR_E;

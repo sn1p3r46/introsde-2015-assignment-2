@@ -190,41 +190,39 @@ public class PersonResource {
     @Path("{measureType}")
     @Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
     @Consumes({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
-    public LifeStatus setMeasureType(LifeStatus lf, @PathParam("measureType") String measureName){
+    public LifeStatus setMeasureType(HealthMeasureHistory hmh_p, @PathParam("measureType") String measureName){
 
         Person p = Person.getPersonById(this.id);
-
-    	//if(p == null){
-    	//	return Response.status(Status.NOT_FOUND).build();
-    	//}
-        System.out.println("\n\n\n\n\n\n\n\n\n"+lf.getValue()+"\n\n\n\n\n\n\n\n\n");
-        //searches the measure definition associated with the name of the measure
-
         MeasureDefinition mdef = MeasureDefinition.getMeasureDefinitionByName(measureName);
+        String value = hmh_p.getValue();
 
         LifeStatus olf = LifeStatus.getLifeStatusByMeasureDefinitionAndPerson(mdef,p);
         if(olf!=null){
             LifeStatus.removeLifeStatus(olf);
         }
 
+        LifeStatus lf = new LifeStatus(p,mdef,value);
         lf.setIdMeasure(mdef.getIdMeasureDef());
         lf.setPerson(p);
         lf.setMeasureDefinition(mdef);
         //lf.setValue(hmh.getValue());
         lf = LifeStatus.saveLifeStatus(lf);
 
-        HealthMeasureHistory hmh = new HealthMeasureHistory();
-        hmh.setTimestamp(Calendar.getInstance().getTime());
-        hmh.setMeasureDefinition(mdef);
-        hmh.setPerson(p);
-        hmh.setValue(lf.getValue());
+        if (hmh_p.getTimestamp() == null){
+            Calendar today = Calendar.getInstance();
+            hmh_p.setTimestamp(today.getTime());
+        }
 
-        HealthMeasureHistory.saveHealthMeasureHistory(hmh);
-        //if (hmh == null)
-        //    throw new RuntimeException("Get: History for person " + id + " not found");
+        hmh_p.setMeasureDefinition(mdef);
+        hmh_p.setPerson(p);
+        hmh_p.setValue(lf.getValue());
+
+        HealthMeasureHistory.saveHealthMeasureHistory(hmh_p);
+
         return LifeStatus.getLifeStatusById(lf.getIdMeasure());
-//        return Response.created(uriInfo.getAbsolutePath()).build();
-    }
+}
+
+// SELECT *, MAX(timestamp) FROM HealthMeasureHistory GROUP BY idPerson,idMeasureDef
 
     @GET
     @Path("{measureType}/{mid}")
