@@ -12,8 +12,8 @@
 
 
 <p align="center">
-  <img src="images/rest.png" width="300">
-  <img src="images/api.png" width="250">
+  <img src="images/rest.png" width="200">
+  <img src="images/api.png" width="150">
 </p>
 
 
