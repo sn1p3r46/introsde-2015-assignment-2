@@ -17,10 +17,16 @@
 </p>
 
 
+
+The project is totally developed in [Java](https://en.wikipedia.org/wiki/Java_(programming_language)), making use of [Jersey](https://jersey.java.net/) RESTfull library, [JAXB](https://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding) **Java Architecture for XML Binding**, [Jackson](https://github.com/FasterXML/jackson) for JSON binding and [JPA](https://en.wikipedia.org/wiki/Java_Persistence_API) for the persistency.  
+
+
+
+
 <p align="center">
   <br/><b><a href="https://atom.io/">Editor Used:</a></b><br/>
   <a href="https://atom.io/">
-  <img src="https://cloud.githubusercontent.com/assets/72919/2874231/3af1db48-d3dd-11e3-98dc-6066f8bc766f.png" width="200">
+  <img src="images/ATOM.png" width="200">
   </a>
 </p>
 
