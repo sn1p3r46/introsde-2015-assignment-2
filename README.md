@@ -13,7 +13,7 @@
 
 <p align="center">
   <img src="images/rest.png" width="200">
-  <img src="images/api.png" width="150">
+  <img src="images/api.png" width="170">
 </p>
 
 
