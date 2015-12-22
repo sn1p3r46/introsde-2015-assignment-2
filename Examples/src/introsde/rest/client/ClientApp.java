@@ -96,7 +96,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 		System.out.println("\n  ASSIGNMENT 2\n  STUDENT Andrea Galloni\n  E-MAIL: andrea[dot]galloni[at]studenti[dot]unitn[dot]it");
 		System.out.println("\n  Client Started.. \n  Server URI: " + PrettyStrings.URI_SERVER);
 
-		pressAnyKeyToContinue();
 
 		ClientConfig clientConfig = new ClientConfig();
 		clientConfig.property(ClientProperties.CONNECT_TIMEOUT, 60*1000);
@@ -154,7 +153,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 			test3_11(PrettyStrings.APP_JSON);
 			pressAnyKeyToContinue();
 			test3_12(PrettyStrings.APP_JSON);
-			
+
 		}
 
 

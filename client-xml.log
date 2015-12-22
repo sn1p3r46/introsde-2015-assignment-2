@@ -12,11 +12,6 @@
      [java]  
      [java] 
      [java] 
-     [java]  
-     [java]   Press any key to continue... 
-     [java]  
-     [java] 
-     [java] 
      [java] 			##############
      [java] 			## TEST 3.1 ##
      [java] 			##############
@@ -28,7 +23,7 @@
      [java] <people>
      [java]      <person>
      [java]           <idPerson>1</idPerson>
-     [java]           <firstname>Jooooooooohn</firstname>
+     [java]           <firstname>NAAAAAAASH</firstname>
      [java]           <lastname>VERDI</lastname>
      [java]           <birthdate>1992-10-20T00:00:00+01:00</birthdate>
      [java]           <healthprofile>
@@ -51,684 +46,7 @@
      [java]           <firstname>Chuck</firstname>
      [java]           <lastname>Norris</lastname>
      [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6604</idPerson>
-     [java]           <firstname>NAAAAAAASH</firstname>
-     [java]           <lastname>VERDI</lastname>
-     [java]           <birthdate>1992-10-27T00:00:00+01:00</birthdate>
      [java]           <healthprofile/>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6605</idPerson>
-     [java]           <firstname>NAAAAAAASH</firstname>
-     [java]           <lastname>VERDI</lastname>
-     [java]           <birthdate>1992-10-27T00:00:00+01:00</birthdate>
-     [java]           <healthprofile/>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6654</idPerson>
-     [java]           <firstname>NAAAAAAASH</firstname>
-     [java]           <lastname>VERDI</lastname>
-     [java]           <birthdate>1992-10-27T00:00:00+01:00</birthdate>
-     [java]           <healthprofile/>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6704</idPerson>
-     [java]           <firstname>NAAAAAAASH</firstname>
-     [java]           <lastname>VERDI</lastname>
-     [java]           <birthdate>1992-10-27T00:00:00+01:00</birthdate>
-     [java]           <healthprofile/>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6754</idPerson>
-     [java]           <firstname>NAAAAAAASH</firstname>
-     [java]           <lastname>VERDI</lastname>
-     [java]           <birthdate>1992-10-27T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>72</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>72</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>bmi</measure>
-     [java]                     <value>72</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6755</idPerson>
-     [java]           <firstname>NAAAAAAASH</firstname>
-     [java]           <lastname>VERDI</lastname>
-     [java]           <birthdate>1992-10-27T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>72</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>72</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>bmi</measure>
-     [java]                     <value>72</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6756</idPerson>
-     [java]           <firstname>DIOCANE</firstname>
-     [java]           <lastname>DIOCANE</lastname>
-     [java]           <birthdate>1992-10-27T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>765</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>722</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>bmi</measure>
-     [java]                     <value>45</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6757</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6804</idPerson>
-     [java]           <firstname>CIAO</firstname>
-     [java]           <lastname>CASSETTO</lastname>
-     [java]           <birthdate>1978-09-02T00:00:00+02:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>180</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>87</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6805</idPerson>
-     [java]           <firstname>CIAO</firstname>
-     [java]           <lastname>CASSETTO</lastname>
-     [java]           <birthdate>1978-09-02T00:00:00+02:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>180</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>87</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6854</idPerson>
-     [java]           <firstname>CIAO</firstname>
-     [java]           <lastname>CASSETTO</lastname>
-     [java]           <birthdate>1978-09-02T00:00:00+02:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>180</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>87</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6855</idPerson>
-     [java]           <firstname>CIAO</firstname>
-     [java]           <lastname>CASSETTO</lastname>
-     [java]           <birthdate>1978-09-02T00:00:00+02:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>180</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>87</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6856</idPerson>
-     [java]           <firstname>CIAO</firstname>
-     [java]           <lastname>CASSETTO</lastname>
-     [java]           <birthdate>1978-09-02T00:00:00+02:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>180</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>87</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6857</idPerson>
-     [java]           <firstname>CIAO</firstname>
-     [java]           <lastname>CASSETTO</lastname>
-     [java]           <birthdate>1978-09-02T00:00:00+02:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>180</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>87</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6858</idPerson>
-     [java]           <firstname>DIOCANE</firstname>
-     [java]           <lastname>DIOCANE</lastname>
-     [java]           <birthdate>1992-10-27T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>765</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>722</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>bmi</measure>
-     [java]                     <value>45</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6859</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6904</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6906</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6908</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6910</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6912</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6914</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6916</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6918</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6920</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6922</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6924</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6926</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6928</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6930</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6932</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6954</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6956</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6958</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>7004</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>7006</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>7008</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>7010</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>7012</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>7014</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>7016</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>7018</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>7019</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
      [java]      </person>
      [java]      <person>
      [java]           <idPerson>10000</idPerson>
@@ -769,7 +87,7 @@
      [java] 
      [java] <person>
      [java]      <idPerson>1</idPerson>
-     [java]      <firstname>Jooooooooohn</firstname>
+     [java]      <firstname>NAAAAAAASH</firstname>
      [java]      <lastname>VERDI</lastname>
      [java]      <birthdate>1992-10-20T00:00:00+01:00</birthdate>
      [java]      <healthprofile>
@@ -805,7 +123,7 @@
      [java] 
      [java] <person>
      [java]      <idPerson>1</idPerson>
-     [java]      <firstname>NAAAAAAASH</firstname>
+     [java]      <firstname>Jooooooooohn</firstname>
      [java]      <lastname>VERDI</lastname>
      [java]      <birthdate>1992-10-20T00:00:00+01:00</birthdate>
      [java]      <healthprofile>
@@ -840,7 +158,7 @@
      [java] 	=> HTTP Status: 200
      [java] 
      [java] <person>
-     [java]      <idPerson>7020</idPerson>
+     [java]      <idPerson>7054</idPerson>
      [java]      <firstname>Chuck</firstname>
      [java]      <lastname>Norris</lastname>
      [java]      <birthdate>1945-01-01T00:00:00+01:00</birthdate>
@@ -867,12 +185,12 @@
      [java] 			## TEST 3.5 ##
      [java] 			##############
      [java] 
-     [java] Request #5: DELETE /person/7020
+     [java] Request #5: DELETE /person/7054
      [java] 	=> Result: OK
      [java] 	=> HTTP Status: 204
      [java] 
      [java] 
-     [java] Request #5: GET /person/7020
+     [java] Request #5: GET /person/7054
      [java] 	=> Result: OK
      [java] 	=> HTTP Status: 404
      [java] 
@@ -916,7 +234,7 @@
      [java]      <measure>
      [java]           <idMeasureHistory>10002</idMeasureHistory>
      [java]           <timestamp>2014-11-23T15:06:40+01:00</timestamp>
-     [java]           <value>945</value>
+     [java]           <value>278</value>
      [java]      </measure>
      [java]      <measure>
      [java]           <idMeasureHistory>10003</idMeasureHistory>
@@ -943,7 +261,7 @@
      [java] <measure>
      [java]      <idMeasureHistory>10002</idMeasureHistory>
      [java]      <timestamp>2014-11-23T15:06:40+01:00</timestamp>
-     [java]      <value>945</value>
+     [java]      <value>278</value>
      [java] </measure>
      [java] 
      [java] 
@@ -962,7 +280,7 @@
      [java] 	=> HTTP Status: 200
      [java] 
      [java] 
-     [java] THE NUMBER OF MEASUREMENTS IS: 47
+     [java] THE NUMBER OF MEASUREMENTS IS: 1
      [java] 
      [java] 
      [java] NOW I AM GOING TO MAKE THE POST REQUEST
@@ -970,7 +288,7 @@
      [java] 
      [java] <measure>
      [java]  <value>72</value>
-     [java]  <timestamp>2013-01-01T19:22:28.821+01:00</timestamp>
+     [java]  <timestamp>2013-01-01T19:33:21.316+01:00</timestamp>
      [java] </measure>
      [java] 
      [java] Request #9: POST /person/1/bmi Accept: application/xml Content-type: application/xml
@@ -993,7 +311,7 @@
      [java] 
      [java] 
      [java] 
-     [java] THE NEW NUMBER OF MEASUREMENTS IS: 48
+     [java] THE NEW NUMBER OF MEASUREMENTS IS: 2
      [java] 
      [java] 
      [java] 
@@ -1019,7 +337,7 @@
      [java] <measure>
      [java]      <idMeasureHistory>10002</idMeasureHistory>
      [java]      <timestamp>2014-11-23T15:06:40+01:00</timestamp>
-     [java]      <value>945</value>
+     [java]      <value>278</value>
      [java] </measure>
      [java] 
      [java] 
@@ -1035,13 +353,13 @@
      [java] <measure>
      [java]      <idMeasureHistory>10002</idMeasureHistory>
      [java]      <timestamp>2014-11-23T15:06:40+01:00</timestamp>
-     [java]      <value>278</value>
+     [java]      <value>905</value>
      [java] </measure>
      [java] 
      [java] 
      [java] 
      [java] 
-     [java] THE MEASURE VALUE IS CHANGED FROM 945 TO 278
+     [java] THE MEASURE VALUE IS CHANGED FROM 278 TO 905
      [java] 
      [java] 
      [java]  
@@ -1071,7 +389,7 @@
      [java]      <measure>
      [java]           <idMeasureHistory>10002</idMeasureHistory>
      [java]           <timestamp>2014-11-23T15:06:40+01:00</timestamp>
-     [java]           <value>278</value>
+     [java]           <value>905</value>
      [java]      </measure>
      [java]      <measure>
      [java]           <idMeasureHistory>10003</idMeasureHistory>
@@ -1093,7 +411,7 @@
      [java]      <measure>
      [java]           <idMeasureHistory>10002</idMeasureHistory>
      [java]           <timestamp>2014-11-23T15:06:40+01:00</timestamp>
-     [java]           <value>278</value>
+     [java]           <value>905</value>
      [java]      </measure>
      [java] </healthMeasureHistories>
      [java] 
@@ -1125,7 +443,7 @@
      [java] <people>
      [java]      <person>
      [java]           <idPerson>1</idPerson>
-     [java]           <firstname>NAAAAAAASH</firstname>
+     [java]           <firstname>Jooooooooohn</firstname>
      [java]           <lastname>VERDI</lastname>
      [java]           <birthdate>1992-10-20T00:00:00+01:00</birthdate>
      [java]           <healthprofile>
@@ -1148,684 +466,7 @@
      [java]           <firstname>Chuck</firstname>
      [java]           <lastname>Norris</lastname>
      [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6604</idPerson>
-     [java]           <firstname>NAAAAAAASH</firstname>
-     [java]           <lastname>VERDI</lastname>
-     [java]           <birthdate>1992-10-27T00:00:00+01:00</birthdate>
      [java]           <healthprofile/>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6605</idPerson>
-     [java]           <firstname>NAAAAAAASH</firstname>
-     [java]           <lastname>VERDI</lastname>
-     [java]           <birthdate>1992-10-27T00:00:00+01:00</birthdate>
-     [java]           <healthprofile/>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6654</idPerson>
-     [java]           <firstname>NAAAAAAASH</firstname>
-     [java]           <lastname>VERDI</lastname>
-     [java]           <birthdate>1992-10-27T00:00:00+01:00</birthdate>
-     [java]           <healthprofile/>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6704</idPerson>
-     [java]           <firstname>NAAAAAAASH</firstname>
-     [java]           <lastname>VERDI</lastname>
-     [java]           <birthdate>1992-10-27T00:00:00+01:00</birthdate>
-     [java]           <healthprofile/>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6754</idPerson>
-     [java]           <firstname>NAAAAAAASH</firstname>
-     [java]           <lastname>VERDI</lastname>
-     [java]           <birthdate>1992-10-27T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>72</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>72</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>bmi</measure>
-     [java]                     <value>72</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6755</idPerson>
-     [java]           <firstname>NAAAAAAASH</firstname>
-     [java]           <lastname>VERDI</lastname>
-     [java]           <birthdate>1992-10-27T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>72</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>72</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>bmi</measure>
-     [java]                     <value>72</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6756</idPerson>
-     [java]           <firstname>DIOCANE</firstname>
-     [java]           <lastname>DIOCANE</lastname>
-     [java]           <birthdate>1992-10-27T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>765</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>722</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>bmi</measure>
-     [java]                     <value>45</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6757</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6804</idPerson>
-     [java]           <firstname>CIAO</firstname>
-     [java]           <lastname>CASSETTO</lastname>
-     [java]           <birthdate>1978-09-02T00:00:00+02:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>180</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>87</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6805</idPerson>
-     [java]           <firstname>CIAO</firstname>
-     [java]           <lastname>CASSETTO</lastname>
-     [java]           <birthdate>1978-09-02T00:00:00+02:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>180</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>87</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6854</idPerson>
-     [java]           <firstname>CIAO</firstname>
-     [java]           <lastname>CASSETTO</lastname>
-     [java]           <birthdate>1978-09-02T00:00:00+02:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>180</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>87</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6855</idPerson>
-     [java]           <firstname>CIAO</firstname>
-     [java]           <lastname>CASSETTO</lastname>
-     [java]           <birthdate>1978-09-02T00:00:00+02:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>180</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>87</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6856</idPerson>
-     [java]           <firstname>CIAO</firstname>
-     [java]           <lastname>CASSETTO</lastname>
-     [java]           <birthdate>1978-09-02T00:00:00+02:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>180</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>87</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6857</idPerson>
-     [java]           <firstname>CIAO</firstname>
-     [java]           <lastname>CASSETTO</lastname>
-     [java]           <birthdate>1978-09-02T00:00:00+02:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>180</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>87</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6858</idPerson>
-     [java]           <firstname>DIOCANE</firstname>
-     [java]           <lastname>DIOCANE</lastname>
-     [java]           <birthdate>1992-10-27T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>765</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>722</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>bmi</measure>
-     [java]                     <value>45</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6859</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6904</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6906</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6908</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6910</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6912</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6914</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6916</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6918</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6920</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6922</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6924</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6926</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6928</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6930</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6932</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6954</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6956</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6958</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>7004</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>7006</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>7008</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>7010</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>7012</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>7014</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>7016</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>7018</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>7019</idPerson>
-     [java]           <firstname>Chuck</firstname>
-     [java]           <lastname>Norris</lastname>
-     [java]           <birthdate>1945-01-01T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>78.9</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>172</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
      [java]      </person>
      [java]      <person>
      [java]           <idPerson>10000</idPerson>
@@ -1861,49 +502,9 @@
      [java] <people>
      [java]      <person>
      [java]           <idPerson>1</idPerson>
-     [java]           <firstname>NAAAAAAASH</firstname>
+     [java]           <firstname>Jooooooooohn</firstname>
      [java]           <lastname>VERDI</lastname>
      [java]           <birthdate>1992-10-20T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>72</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>72</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>bmi</measure>
-     [java]                     <value>72</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6754</idPerson>
-     [java]           <firstname>NAAAAAAASH</firstname>
-     [java]           <lastname>VERDI</lastname>
-     [java]           <birthdate>1992-10-27T00:00:00+01:00</birthdate>
-     [java]           <healthprofile>
-     [java]                <measureType>
-     [java]                     <measure>weight</measure>
-     [java]                     <value>72</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>height</measure>
-     [java]                     <value>72</value>
-     [java]                </measureType>
-     [java]                <measureType>
-     [java]                     <measure>bmi</measure>
-     [java]                     <value>72</value>
-     [java]                </measureType>
-     [java]           </healthprofile>
-     [java]      </person>
-     [java]      <person>
-     [java]           <idPerson>6755</idPerson>
-     [java]           <firstname>NAAAAAAASH</firstname>
-     [java]           <lastname>VERDI</lastname>
-     [java]           <birthdate>1992-10-27T00:00:00+01:00</birthdate>
      [java]           <healthprofile>
      [java]                <measureType>
      [java]                     <measure>weight</measure>
