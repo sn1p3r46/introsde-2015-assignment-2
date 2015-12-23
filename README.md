@@ -26,7 +26,7 @@ The project is totally developed in [Java](https://en.wikipedia.org/wiki/Java_(p
 ## Requirements:
 `Apache Ant, OpenJDK, JRE and an Internet Connection;`
 
-## Database and Models schemas:
+## Database and Models Schemas:
 
 <p align="center">
   <img src="images/lifecoach.png" width="700">
