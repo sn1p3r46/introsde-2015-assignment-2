@@ -28,7 +28,7 @@ The project is totally developed in [Java](https://en.wikipedia.org/wiki/Java_(p
 ## Database and Models schemas:
 
 <p align="center">
-  <img src="images/lifecoach.png" width="900">
+  <img src="images/lifecoach.png" width="700">
 </p>
 
 ## Project Structure
@@ -36,7 +36,7 @@ The project is totally developed in [Java](https://en.wikipedia.org/wiki/Java_(p
 The project is divided in the following packages:
 
 
- #### Server Packages
+#### Server Packages
 
 `introsde.rest.ehealth.dao`: it contains the `LifeCoachDao` ([Data Access Object](https://en.wikipedia.org/wiki/Data_access_object)) class responsible of the data storing management, it provides an abstract interface to the database. ([link](https://github.com/sn1p3r46/introsde-2015-assignment-2/blob/master/Examples/src/introsde/rest/ehealth/dao/LifeCoachDao.java))
 
