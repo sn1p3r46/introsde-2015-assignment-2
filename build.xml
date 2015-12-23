@@ -122,7 +122,7 @@
                 </fileset>
             </copy>
         </target>
-        <target name="start">
+        <target name="start" depends="clean, init, compile">
             <echo message="app start introsde.rest.ehealth.App in ${build.dir}" />
             <java classname="introsde.rest.ehealth.App" classpath="${build.dir}" fork="true">
                 <arg value="$JAVA_OPTS  -cp" />
@@ -188,42 +188,6 @@
                 </batchtest>
             </junit>
         </target>
-<!--
-        <target name="execute.clientXML">
-    		<record name="client-xml.log" action="start" append="no"/>
-    		<echo message="'execute.client' target has been called"/>
-    		<java classname="introsde.rest.client.ClientApp" classpath="${build.dir}" fork="true">
-                <arg value="$JAVA_OPTS  -cp" />
-                <arg value="XML"/>
-    			<classpath>
-    				<path location="build" />
-                    <fileset dir="WebContent/WEB-INF/lib">
-                        <include name="**/*.jar" />
-                        <include name="*.jar" />
-                    </fileset>
-    			</classpath>
-    		</java>
-    		<record name="client-xml.log" action="stop"/>
-    		<echo message="Created the file client-xml.log containing the output of the execute.client target" />
-    	</target>
-        <target name="execute.clientJSON">
-    		<record name="client-xml.log" action="start" append="no"/>
-    		<echo message="'execute.client' target has been called"/>
-    		<java classname="introsde.rest.client.ClientApp" classpath="${build.dir}" fork="true">
-                <arg value="$JAVA_OPTS  -cp" />
-                <arg value="JSON"/>
-    			<classpath>
-    				<path location="build" />
-                    <fileset dir="WebContent/WEB-INF/lib">
-                        <include name="**/*.jar" />
-                        <include name="*.jar" />
-                    </fileset>
-    			</classpath>
-    		</java>
-    		<record name="client-xml.log" action="stop"/>
-    		<echo message="Created the file client-xml.log containing the output of the execute.client target" />
-    	</target> -->
-        <!-- make sure you have created first the WebContent folder, including a META-INF folder, WEB-INF/web.xml file and WEB-INF/lib folder -->
         <target name="create.war" depends="install">
             <war destfile="sdelab06.war" webxml="${web.dir}/WebContent/WEB-INF/web.xml">
                 <fileset dir="${web.dir}/WebContent">
