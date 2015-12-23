@@ -103,7 +103,7 @@
                 </fileset>
             </copy>
         </target>
-        <target name="compile" depends="clean">
+        <target name="compile" depends="clean, init">
             <echo message="Compile target has been called" />
             <mkdir dir="${build.dir}" />
             <echo message="${build.dir} has been created" />
@@ -188,12 +188,5 @@
                 </batchtest>
             </junit>
         </target>
-        <target name="create.war" depends="install">
-            <war destfile="sdelab06.war" webxml="${web.dir}/WebContent/WEB-INF/web.xml">
-                <fileset dir="${web.dir}/WebContent">
-                    <include name="**/*.*" />
-                </fileset>
-                <classes dir="${build.dir}" />
-            </war>
-        </target>
+
     </project>

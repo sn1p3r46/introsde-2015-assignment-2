@@ -25,6 +25,11 @@ The project is totally developed in [Java](https://en.wikipedia.org/wiki/Java_(p
 ## Requirements:
 `Apache Ant, OpenJDK, JRE and an Internet Connection;`
 
+## Database and Models schemas:
+
+<p align="center">
+  <img src="images/lifecoach.png" width="900">
+</p>
 
 ## Project Structure
 
@@ -63,7 +68,10 @@ The project contains some additional files and folders.
 
 ## Execution
 
-
+To compile all the project:
+```
+ant compile
+```
 To execute the REST server enter:
 ```
 ant start
