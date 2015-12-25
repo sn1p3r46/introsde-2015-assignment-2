@@ -187,7 +187,16 @@ public static List<HealthMeasureHistory> getMeasureByDate(MeasureDefinition mdef
 	  LifeCoachDao.instance.closeConnections(em);
 	  return p;
 	}
-
+	
+	public static void removeHealthMeasureHistory(HealthMeasureHistory p) {
+		EntityManager em = LifeCoachDao.instance.createEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+	    p=em.merge(p);
+	    em.remove(p);
+	    tx.commit();
+	    LifeCoachDao.instance.closeConnections(em);
+	}
 
 	public static HealthMeasureHistory updateHealthMeasureHistory(HealthMeasureHistory p) {
 		EntityManager em = LifeCoachDao.instance.createEntityManager();
@@ -199,14 +208,4 @@ public static List<HealthMeasureHistory> getMeasureByDate(MeasureDefinition mdef
 	    return p;
 	}
 
-
-	public static void removeHealthMeasureHistory(HealthMeasureHistory p) {
-		EntityManager em = LifeCoachDao.instance.createEntityManager();
-		EntityTransaction tx = em.getTransaction();
-		tx.begin();
-	    p=em.merge(p);
-	    em.remove(p);
-	    tx.commit();
-	    LifeCoachDao.instance.closeConnections(em);
-	}
 }
