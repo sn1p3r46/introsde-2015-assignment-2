@@ -79,78 +79,7 @@ public class PersonCollectionResource {
         int count = people.size();
         return String.valueOf(count);
     }
-    /*
-    @POST
-    @Produces({MediaType.APPLICATION_JSON ,  MediaType.APPLICATION_XML})
-    @Consumes({MediaType.APPLICATION_JSON ,  MediaType.APPLICATION_XML})
-    public Person newPerson(Person person) throws IOException {
-        System.out.println("Creating new person...");
-        //List<LifeStatus> lf = person.getLifeStatus();
-        if(person.getLifeStatus() == null){
-    		return Person.savePerson(person);
-    	}else{
-    		//removes the life statuses in the persons and puts them in another variable
-            List<LifeStatus> lfCopy = new ArrayList<LifeStatus>();
-            for(int i=0; i<person.getLifeStatus().size(); i++){
-                System.out.println(person.getLifeStatus().get(i).getIdMeasure());
-                lfCopy.add(person.getLifeStatus().get(i));
-            }
-            for(int i=0; i<person.getLifeStatus().size(); i++){
-                System.out.println(lfCopy.get(i).getMeasureDefinition().getMeasureName());
-                System.out.println(person.getLifeStatus().get(i).getIdMeasure());
-            }
-            System.out.println("! ! ! ! Press Any Key To Continue...");
-                new java.util.Scanner(System.in).nextLine();
-            if(lfCopy == null || person.getLifeStatus()==null){
-                System.out.println("SONO NULLO ! ! ! ! Press Any Key To Continue...");
-                    new java.util.Scanner(System.in).nextLine();
-            }
-
-    		person.setLifeStatus(null);
-
-    		Person p = Person.savePerson(person);
-    		int pid = p.getIdPerson();
-            System.out.println(p.getIdPerson());
-            if(p==null){
-                System.out.println("P è nullo");
-            }
-
-    		Calendar today = Calendar.getInstance();
-
-    		for(int i=0; i<lfCopy.size(); i++){
-                System.out.println(lfCopy.size());
-                System.out.println("! ! ! ! Press Any Key To Continue...");
-                    new java.util.Scanner(System.in).nextLine();
-    			lfCopy.get(i).setPerson(p);
-    			HealthMeasureHistory story = new HealthMeasureHistory();
-
-    			String measureName = lfCopy.get(i).getMeasureDefinition().getMeasureName();
-                System.out.println(measureName);
-                System.out.println("! ! ! ! Press Any Key To Continue...");
-                    new java.util.Scanner(System.in).nextLine();
-    			MeasureDefinition existingDefinition = new MeasureDefinition();
-    			existingDefinition = MeasureDefinition.getMeasureDefinitionByName(measureName);
-                if(existingDefinition==null){
-                    System.out.println("existingDef is null ");
-                    System.out.println("! ! ! ! Press Any Key To Continue...");
-                        new java.util.Scanner(System.in).nextLine();
-                }
-    			if (existingDefinition != null){
-    				lfCopy.get(i).setMeasureDefinition(existingDefinition);
-    				story.setMeasureDefinition(existingDefinition);
-    				story.setPerson(p);
-    				story.setValue(lfCopy.get(i).getValue());
-    				story.setTimestamp(today.getTime());
-    				LifeStatus.saveLifeStatus(lfCopy.get(i));  //saves lifestatus in the db
-    				HealthMeasureHistory.saveHealthMeasureHistory(story);
-    			}
-    		}
-    		Person per = Person.getPersonById(pid);
-            return per;
-    	}
-    }
-
-*/
+   
 
 @POST
 @Produces({MediaType.APPLICATION_JSON ,  MediaType.APPLICATION_XML})

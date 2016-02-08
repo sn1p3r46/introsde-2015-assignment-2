@@ -6,7 +6,7 @@ import javax.ws.rs.core.MediaType;
 
 public class PrettyStrings {
 
-  public static final String URI_SERVER = "http://127.0.1.1:5700/sdelab";
+  public static final String URI_SERVER = "https://cryptic-sierra-46860.herokuapp.com/sdelab";
   public static final String ERROR_E = "ERROR";
   public static final String OK_OK = "OK";
   public static final String APP_JSON = MediaType.APPLICATION_JSON;
