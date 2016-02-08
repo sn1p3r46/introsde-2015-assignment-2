@@ -5,7 +5,7 @@
      [java]   E-MAIL: andrea[dot]galloni[at]studenti[dot]unitn[dot]it
      [java] 
      [java]   Client Started.. 
-     [java]   Server URI: https://sheltered-brushlands-39302.herokuapp.com/sdelab
+     [java]   Server URI: https://cryptic-sierra-46860.herokuapp.com/sdelab
      [java] 
      [java]  
      [java]   Press any key to continue... 
@@ -16,7 +16,7 @@
      [java] 			## TEST 3.1 ##
      [java] 			##############
      [java] 
-     [java] Feb 08, 2016 10:13:37 PM org.glassfish.jersey.message.internal.ReaderInterceptorExecutor$TerminalReaderInterceptor aroundReadFrom
+     [java] Feb 08, 2016 10:41:08 PM org.glassfish.jersey.message.internal.ReaderInterceptorExecutor$TerminalReaderInterceptor aroundReadFrom
      [java] SEVERE: MessageBodyReader not found for media type=text/html; charset=utf-8, type=interface java.util.List, genericType=java.util.List<introsde.rest.client.schemas.generated.models.person.Person>.
      [java] Exception in thread "main" org.glassfish.jersey.message.internal.MessageBodyProviderNotFoundException: MessageBodyReader not found for media type=text/html; charset=utf-8, type=interface java.util.List, genericType=java.util.List<introsde.rest.client.schemas.generated.models.person.Person>.
      [java] 	at org.glassfish.jersey.message.internal.ReaderInterceptorExecutor$TerminalReaderInterceptor.aroundReadFrom(ReaderInterceptorExecutor.java:230)
