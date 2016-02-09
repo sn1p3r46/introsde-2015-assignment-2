@@ -16,8 +16,8 @@
   <img src="images/api.png" width="170">
 </p>
 
-The project implements both a [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) server and a client that is able to perform and test the server functionalities, the server can handle multiple body type formats: [JSON](https://en.wikipedia.org/wiki/JSON) and [XML](https://en.wikipedia.org/wiki/XML). 
-For this assignment I have implemented also all **Extra Points** requests. 
+The project implements both a [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) server and a client that is able to perform and test the server functionalities, the server can handle multiple body type formats: [JSON](https://en.wikipedia.org/wiki/JSON) and [XML](https://en.wikipedia.org/wiki/XML).
+For this assignment I have implemented also all **Extra Points** requests.
 
 The project is totally developed in [Java](https://en.wikipedia.org/wiki/Java_(programming_language)), making use of [Jersey](https://jersey.java.net/) RESTfull library, [JAXB](https://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding) **Java Architecture for XML Binding**, [Jackson](https://github.com/FasterXML/jackson) for JSON binding and [JPA](https://en.wikipedia.org/wiki/Java_Persistence_API) for the persistency.
 
@@ -85,6 +85,9 @@ To execute the client tests in [XML](https://en.wikipedia.org/wiki/XML):
 ```
 ant client.testJSON
 ```
+PLEASE: If you are running the server locally MIND to change the server address and launch the server application and before running the client
+
+The URI of the server is hard coded in Examples/src/introsde/rest/client/helpers/PrettyStrings.java file.
 
 
 
