@@ -73,7 +73,7 @@ To compile all the project:
 ```
 ant compile
 ```
-To execute the REST server enter:
+To execute the REST server enter (not neeeded if you want to run it with Heroku):
 ```
 ant start
 ```
@@ -85,10 +85,10 @@ To execute the client tests in [XML](https://en.wikipedia.org/wiki/XML):
 ```
 ant client.testJSON
 ```
-PLEASE: If you are running the server locally MIND to change the server address and launch the server application and before running the client
 
-The URI of the server is hard coded in Examples/src/introsde/rest/client/helpers/PrettyStrings.java file.
+`PLEASE:  If you are running the server locally MIND to change the server address and launch the server application and before running the client`
 
+The URI of the server is hard coded in `Examples/src/introsde/rest/client/helpers/PrettyStrings.java` file.
 
 
 <p align="center">
